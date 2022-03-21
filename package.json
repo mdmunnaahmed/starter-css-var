@@ -1,0 +1,29 @@
+{
+  "name": "jobtotal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://fahaddevs@bitbucket.org/fahaddevs/jobtotal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/fahaddevs/jobtotal#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.4",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssbeautify": "^3.0.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0"
+  },
+  "dependencies": {
+    "sass": "^1.49.9"
+  }
+}

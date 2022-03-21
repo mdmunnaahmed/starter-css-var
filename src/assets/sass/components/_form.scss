@@ -1,0 +1,125 @@
+.form-label {
+	font-size: 15px;
+}
+.form--control {
+	height: 50px;
+	border-radius: 5px;
+	border: 1px solid var(--border);
+	outline: 0;
+	box-shadow: none;
+	&:focus {
+		color: var(--white);
+		border: 1px solid hsl(var(--primary));
+		outline: 0;
+		box-shadow: none;
+	}
+}
+.form--control[type="file"] {
+	line-height: 25px;
+	padding: 12px 25px;
+}
+
+input:autofill,
+input:autofill:hover,
+input:autofill:focus,
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+	-webkit-text-fill-color: var(--heading);
+	transition: background-color 5000s ease-in-out 0s;
+}
+
+.input-group > select {
+	position: relative;
+	flex: 1 1 auto;
+	width: 1%;
+	min-width: 0;
+}
+.input-group {
+	select {
+		background-color: transparent;
+		border: none;
+	}
+}
+.custom--radio {
+	position: relative;
+	padding-left: 0;
+	input[type="radio"] {
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		visibility: hidden;
+		cursor: pointer;
+		&:checked {
+			~ label {
+				&::before {
+					border-width: 2px;
+					border-color: hsl(var(--primary)) !important;
+				}
+				&::after {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	label {
+		margin-bottom: 0;
+		position: relative;
+		padding-left: 20px;
+		font-size: rem(14px);
+		font-weight: 400;
+		&::before {
+			position: absolute;
+			content: "";
+			top: 4px;
+			left: 0;
+			width: 15px;
+			height: 15px;
+			border: 1px solid #888888;
+		}
+		&::after {
+			position: absolute;
+			content: "";
+			top: 8px;
+			left: 4px;
+			width: 7px;
+			height: 7px;
+			background-color: hsl(var(--primary)) !important;
+			opacity: 0;
+		}
+	}
+}
+.custom--checkbox {
+	padding-left: rem(25px);
+	input {
+		display: none;
+		&:checked {
+			~ label {
+				&::before {
+					content: "\f14a";
+					color: rgb(var(--base));
+				}
+			}
+		}
+	}
+	label {
+		position: relative;
+		font-size: rem(15px);
+		font-weight: 400;
+		cursor: pointer;
+		margin-bottom: 0;
+		&::before {
+			position: absolute;
+			content: "\f04d";
+			font-family: "Line Awesome Free";
+			font-weight: 900;
+			top: 3px;
+			left: rem(-25px);
+			font-size: rem(20px);
+			line-height: 1;
+			@extend %transition;
+		}
+	}
+}
+/* form css end*/

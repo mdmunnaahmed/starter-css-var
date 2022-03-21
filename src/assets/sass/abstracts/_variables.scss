@@ -1,0 +1,66 @@
+:root {
+	// Fonts
+	--heading: "Josefin Sans", sans-serif;
+	--body: "Josefin Sans", sans-serif;
+
+	//Colors
+	--heading: 18 15 42;
+	--body: 77 70 70;
+	--border: 0 0% 88%;
+	// Colors
+	--base: 39 107 255;
+
+	// Accent Color Shade
+	--accent-h: 205;
+	--accent-s: 100%;
+	--accent-l: 14%;
+	--accent-50: var(--accent-h) var(--accent-s) calc(var(--accent-l) + 25%);
+	--accent-100: var(--accent-h) var(--accent-s) calc(var(--accent-l) + 20%);
+	--accent-200: var(--accent-h) var(--accent-s) calc(var(--accent-l) + 15%);
+	--accent-300: var(--accent-h) var(--accent-s) calc(var(--accent-l) + 10%);
+	--accent-400: var(--accent-h) var(--accent-s) calc(var(--accent-l) + 5%);
+	--accent: var(--accent-h) var(--accent-s) var(--accent-l);
+	--accent-600: var(--accent-h) var(--accent-s) calc(var(--accent-l) - 5%);
+	--accent-700: var(--accent-h) var(--accent-s) calc(var(--accent-l) - 10%);
+	--accent-800: var(--accent-h) var(--accent-s) calc(var(--accent-l) - 15%);
+	--accent-900: var(--accent-h) var(--accent-s) calc(var(--accent-l) - 20%);
+
+	--primary: 245 82% 67%;
+	--secondary: 210 7% 56%;
+	--success: 147 67% 47%;
+	--danger: 360 78% 62%;
+	--warning: 29 100% 63%;
+	--info: 203 89% 53%;
+	--dark: 206 70% 11%;
+	--white: 0 0% 100%;
+
+	// Light Color Shade
+	--light-h: 140;
+	--light-s: 27%;
+	--light-l: 98%;
+	--light-50: var(--light-h) var(--light-s) calc(var(--light-l) + 33%);
+	--light-100: var(--light-h) var(--light-s) calc(var(--light-l) + 20%);
+	--light-200: var(--light-h) var(--light-s) calc(var(--light-l) + 15%);
+	--light-300: var(--light-h) var(--light-s) calc(var(--light-l) + 10%);
+	--light-400: var(--light-h) var(--light-s) calc(var(--light-l) + 5%);
+	--light: var(--light-h) var(--light-s) var(--light-l);
+	--light-600: var(--light-h) var(--light-s) calc(var(--light-l) - 5%);
+	--light-700: var(--light-h) var(--light-s) calc(var(--light-l) - 10%);
+	--light-800: var(--light-h) var(--light-s) calc(var(--light-l) - 15%);
+	--light-900: var(--light-h) var(--light-s) calc(var(--light-l) - 20%);
+
+	// Black Color Shade
+	--black-h: 0;
+	--black-s: 0%;
+	--black-l: 0%;
+	--black-50: var(--black-h) var(--black-s) calc(var(--black-l) + 33%);
+	--black-100: var(--black-h) var(--black-s) calc(var(--black-l) + 20%);
+	--black-200: var(--black-h) var(--black-s) calc(var(--black-l) + 15%);
+	--black-300: var(--black-h) var(--black-s) calc(var(--black-l) + 10%);
+	--black-400: var(--black-h) var(--black-s) calc(var(--black-l) + 5%);
+	--black: var(--black-h) var(--black-s) var(--black-l);
+	--black-600: var(--black-h) var(--black-s) calc(var(--black-l) - 5%);
+	--black-700: var(--black-h) var(--black-s) calc(var(--black-l) - 10%);
+	--black-800: var(--black-h) var(--black-s) calc(var(--black-l) - 15%);
+	--black-900: var(--black-h) var(--black-s) calc(var(--black-l) - 20%);
+}

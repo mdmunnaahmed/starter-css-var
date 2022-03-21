@@ -1,0 +1,78 @@
+.custom--card {
+	border: 1px solid var(--border);
+	border-radius: 5px;
+}
+
+.custom--card .card-header,
+.custom--card .card-footer {
+	color: hsl(var(--dark)) !important;
+	text-align: center;
+	.card-title {
+		color: var(--white);
+		margin: 0;
+	}
+}
+
+.custom--card.card--primary .card-header,
+.custom--card.card--primary .card-footer {
+	background: rgb(var(--base));
+}
+.custom--card.card--base .card-header,
+.custom--card.card--base .card-footer {
+	background: rgb(var(--base));
+}
+
+.custom--card .card-header,
+.custom--card .card-footer {
+	padding: 15px 25px;
+	border-color: var(--border) !important;
+	@include breakpoint(max-sm) {
+		padding: 10px 20px;
+	}
+	@include breakpoint(max-sm) {
+		padding: 8px 15px;
+	}
+}
+.custom--card .card-body {
+	padding: 25px;
+	@include breakpoint(max-sm) {
+		padding: 20px;
+	}
+	@include breakpoint(max-xs) {
+		padding: 15px;
+	}
+}
+
+.custom--card.card--lg .card-header,
+.custom--card.card--lg .card-footer {
+	padding: 20px 35px;
+	@include breakpoint(max-md) {
+		padding: 15px 25px;
+	}
+	@include breakpoint(max-sm) {
+		padding: 10px 20px;
+	}
+	@include breakpoint(max-xs) {
+		padding: 8px 15px;
+	}
+}
+.custom--card.card--lg .card-body {
+	padding: 35px;
+	@include breakpoint(max-md) {
+		padding: 25px;
+	}
+	@include breakpoint(max-sm) {
+		padding: 20px;
+	}
+	@include breakpoint(max-xs) {
+		padding: 15px;
+	}
+}
+
+.custom--card.card--md .card-header,
+.custom--card.card--md .card-footer {
+	padding: 10px 20px;
+}
+.custom--card.card--md .card-body {
+	padding: 20px 20px;
+}

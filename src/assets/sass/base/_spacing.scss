@@ -1,0 +1,33 @@
+// Padding Top
+.pt-120 {
+    padding-top: clamp(60px, 6vw, 120px);
+}
+.pt-100 {
+    padding-top: clamp(50px, 6vw, 100px);
+}
+.pt-80 {
+    padding-top: clamp(40px, 6vw, 80px);
+}
+.pt-60 {
+    padding-top: clamp(30px, 6vw, 60px);
+}
+.pt-50 {
+    padding-top: clamp(25px, 6vw, 50px);
+}
+
+// Padding Bottom
+.pb-120 {
+    padding-bottom: clamp(60px, 6vw, 120px);
+}
+.pb-100 {
+    padding-bottom: clamp(50px, 6vw, 100px);
+}
+.pb-80 {
+    padding-bottom: clamp(40px, 6vw, 80px);
+}
+.pb-60 {
+    padding-bottom: clamp(30px, 6vw, 60px);
+}
+.pb-50 {
+    padding-bottom: clamp(25px, 6vw, 50px);
+}

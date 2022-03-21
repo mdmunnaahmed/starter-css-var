@@ -1,0 +1,47 @@
+.pagination {
+	margin: 0;
+	margin-top: 55px;
+	@extend %flex;
+	justify-content: center;
+	@include breakpoint(max-sm) {
+		margin-top: 30px;
+	}
+	.page-item {
+		text-align: center;
+		padding: 3px;
+		a,
+		span {
+			font-weight: 600;
+			width: 45px;
+			height: 45px;
+			color: rgb(var(--base));
+			line-height: 45px;
+			padding: 0;
+			// border: none;
+			border-radius: 50% !important;
+			border-color: rgb(var(--base));
+			box-shadow: none;
+			outline: 0;
+		}
+		span {
+			border: none;
+		}
+		&.active,
+		&:hover {
+			span,
+			a {
+				background: rgb(var(--base));
+				color: hsl(var(--dark)) !important;
+				border-color: rgb(var(--base));
+			}
+		}
+		&.disabled {
+			cursor: no-drop !important;
+			span,
+			a {
+				background: rgba(var(--white), 0.05);
+				border: none;
+			}
+		}
+	}
+}
