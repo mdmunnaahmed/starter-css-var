@@ -1,15 +1,17 @@
 .form-label {
 	font-size: 15px;
 }
-.form--control {
+.form--control,
+.select2-container--default .select2-selection--single,
+.select2-container--default .select2-search--dropdown .select2-search__field {
 	height: 50px;
 	border-radius: 5px;
-	border: 1px solid var(--border);
+	border: 1px solid hsl(var(--border));
 	outline: 0;
 	box-shadow: none;
 	&:focus {
 		color: var(--white);
-		border: 1px solid hsl(var(--primary));
+		border: 1px solid rgb(var(--base));
 		outline: 0;
 		box-shadow: none;
 	}
@@ -25,7 +27,7 @@ input:autofill:focus,
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus {
-	-webkit-text-fill-color: var(--heading);
+	-webkit-text-fill-color: rgb(var(--heading));
 	transition: background-color 5000s ease-in-out 0s;
 }
 
@@ -55,7 +57,7 @@ input:-webkit-autofill:focus {
 			~ label {
 				&::before {
 					border-width: 2px;
-					border-color: hsl(var(--primary)) !important;
+					border-color: rgb(var(--base)) !important;
 				}
 				&::after {
 					opacity: 1;
@@ -85,7 +87,7 @@ input:-webkit-autofill:focus {
 			left: 4px;
 			width: 7px;
 			height: 7px;
-			background-color: hsl(var(--primary)) !important;
+			background-color: rgb(var(--base)) !important;
 			opacity: 0;
 		}
 	}
@@ -123,3 +125,39 @@ input:-webkit-autofill:focus {
 	}
 }
 /* form css end*/
+
+// Select2 Css Starts
+.select2-container {
+	width: 100% !important;
+	> span {
+		width: 100%;
+	}
+}
+.select2-container--default .select2-search--dropdown .select2-search__field {
+	height: 45px;
+}
+.select2-container--default .select2-selection--single {
+	height: 50px;
+	display: flex;
+	align-items: center;
+	font-size: 16px;
+	padding-left: 15px;
+	span {
+		padding: 0 !important;
+		color: hsl(var(--dark)/.7) !important;
+	}
+	.select2-selection__arrow {
+		top: 5px;
+		right: 3px;
+		b {
+			top: 68%;
+		}
+	}
+}
+.dropdown-wrapper {
+	display: none;
+}
+.select2-dropdown {
+	border-color: rgba(0, 0, 0, 0.1);
+}
+// Select2 Css Ends
