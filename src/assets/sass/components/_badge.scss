@@ -1,35 +1,73 @@
 .badge--base {
 	background-color: rgb(var(--base) / 0.15);
-	border: 1px solid rgb(var(--base) / 0.15);
-	color: rgb(var(--base) / 0.15);
+	border: 1px solid rgb(var(--base));
+	color: rgb(var(--base));
 }
-.badge--base {
-	background-color: rgb(var(--primary) / 0.15);
-	border: 1px solid rgb(var(--primary) / 0.15);
-	color: rgb(var(--base) / 0.15);
+.badge--primary {
+	background-color: hsl(var(--primary) / 0.15);
+	border: 1px solid hsl(var(--primary));
+	color: hsl(var(--primary));
 }
-.badge--base {
-	background-color: rgb(var(--secondary) / 0.15);
-	border: 1px solid rgb(var(--secondary) / 0.15);
-	color: rgb(var(--base) / 0.15);
+.badge--secondary {
+	background-color: hsl(var(--secondary) / 0.15);
+	border: 1px solid hsl(var(--secondary));
+	color: hsl(var(--secondary));
 }
-.badge--base {
-	background-color: rgb(var(--success) / 0.15);
-	border: 1px solid rgb(var(--success) / 0.15);
-	color: rgb(var(--base) / 0.15);
+.badge--success {
+	background-color: hsl(var(--success) / 0.15);
+	border: 1px solid hsl(var(--success));
+	color: hsl(var(--success));
 }
-.badge--base {
-	background-color: rgb(var(--danger) / 0.15);
-	border: 1px solid rgb(var(--danger) / 0.15);
-	color: rgb(var(--base) / 0.15);
+.badge--danger {
+	background-color: hsl(var(--danger) / 0.15);
+	border: 1px solid hsl(var(--danger));
+	color: hsl(var(--danger));
 }
-.badge--base {
-	background-color: rgb(var(--warning) / 0.15);
-	border: 1px solid rgb(var(--warning) / 0.15);
-	color: rgb(var(--base) / 0.15);
+.badge--warning {
+	background-color: hsl(var(--warning) / 0.15);
+	border: 1px solid hsl(var(--warning));
+	color: hsl(var(--warning));
 }
-.badge--base {
-	background-color: rgb(var(--dark) / 0.15);
-	border: 1px solid rgb(var(--dark) / 0.15);
-	color: rgb(var(--base) / 0.15);
+.badge--info {
+	background-color: hsl(var(--info) / 0.15);
+	border: 1px solid hsl(var(--info));
+	color: hsl(var(--info));
+}
+.badge--dark {
+	background-color: hsl(var(--dark) / 0.15);
+	border: 1px solid hsl(var(--dark));
+	color: hsl(var(--dark));
+}
+
+
+.badge {
+	border-radius: 18px;
+	padding: 4px 15px;
+	&.badge--icon {
+		padding: 5px;
+		border-radius: 5px;
+	}
+	&.badge--lg {
+		padding: 6px 16px;
+	}
+	&.badge--md {
+		padding: 4px 12px;
+	}
+	&.badge--sm {
+		padding: 3px 10px;
+	}
+}
+
+// Badge Fill
+$colors: "primary" hsl(var(--primary)), "secondary" hsl(var(--secondary)), "success" hsl(var(--success)), "danger" hsl(var(--danger)), "warning" hsl(var(--warning)), "info" hsl(var(--info)), "light" hsl(var(--light)), "dark" hsl(var(--dark)), "base" rgb(var(--base));
+
+@each $name, $color in $colors {
+	.badge--fill-#{$name} {
+		background-color: $color;
+		border: 1px solid $color;
+		color: hsl(var(--white));
+		&:hover {
+			color: hsl(var(--white));
+		}
+	}
 }
