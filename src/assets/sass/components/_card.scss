@@ -1,5 +1,5 @@
 .custom--card {
-	border: 1px solid var(--border);
+	border: 1px solid hsl(var(--border));
 	border-radius: 5px;
 }
 
@@ -7,8 +7,8 @@
 .custom--card .card-footer {
 	color: hsl(var(--dark)) !important;
 	text-align: center;
-	.card-title {
-		color: var(--white);
+	.title {
+		color: hsl(var(--white));
 		margin: 0;
 	}
 }
@@ -25,7 +25,7 @@
 .custom--card .card-header,
 .custom--card .card-footer {
 	padding: 15px 25px;
-	border-color: var(--border) !important;
+	border-color: hsl(var(--border)) !important;
 	@include breakpoint(max-sm) {
 		padding: 10px 20px;
 	}
