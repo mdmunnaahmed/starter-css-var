@@ -120,7 +120,7 @@
 				-webkit-line-clamp: 1;
 				&:hover {
 					padding-left: 20px;
-					background: rgb(var(--base));
+					background: var(--base);
 					color: hsl(var(--heading)) !important;
 				}
 			}
@@ -168,7 +168,7 @@
 		opacity: 0;
 		overflow-y: auto;
 		@include transition;
-		background: rgb(var(--base));
+		background: var(--base);
 		&.active {
 			opacity: 1;
 			transform: translateY(0) scaleY(1);
@@ -230,7 +230,7 @@
 	span {
 		width: 25px;
 		height: 2px;
-		background: rgb(var(--base));
+		background: var(--base);
 		position: relative;
 		transition: all ease 0.3s;
 		&::after,
@@ -240,7 +240,7 @@
 			width: 100%;
 			height: 100%;
 			left: 0;
-			background: rgb(var(--base));
+			background: var(--base);
 			@extend %transition;
 		}
 		&::after {

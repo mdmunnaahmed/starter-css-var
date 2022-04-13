@@ -14,12 +14,12 @@
 			font-weight: 600;
 			width: 45px;
 			height: 45px;
-			color: rgb(var(--base));
+			color: var(--base);
 			line-height: 45px;
 			padding: 0;
 			// border: none;
 			border-radius: 50% !important;
-			border-color: rgb(var(--base));
+			border-color: var(--base);
 			box-shadow: none;
 			outline: 0;
 		}
@@ -30,9 +30,9 @@
 		&:hover {
 			span,
 			a {
-				background: rgb(var(--base));
+				background: var(--base);
 				color: hsl(var(--dark)) !important;
-				border-color: rgb(var(--base));
+				border-color: var(--base);
 			}
 		}
 		&.disabled {

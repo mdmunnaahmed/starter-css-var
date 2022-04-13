@@ -14,7 +14,7 @@
 }
 a.text-white {
 	&:hover {
-		color: rgb(var(--base));
+		color: var(--base1);
 	}
 }
 ul {

@@ -21,23 +21,23 @@ h6 > a {
     word-break: break-word;
 }
 h1 {
-    font-size: clamp(36px, 5vw, 56px);
+    font-size: 70px;
 }
 h2 {
-    font-size: clamp(30px, 5vw, 46px);
+    font-size: 50px ;
 }
 
 h3 {
-    font-size: clamp(22px, 5vw, 30px);
+    font-size: 30px;
 }
 h4 {
-    font-size: clamp(20px, 5vw, 24px);
+    font-size: 24px;
 }
 h5 {
-    font-size: clamp(18px, 5vw, 22px);
+    font-size: 20px;
 }
 h6 {
-    font-size: rem(18px);
+    font-size: 18px;
 }
 
 .fw-medium {

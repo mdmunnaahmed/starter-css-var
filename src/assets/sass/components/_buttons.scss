@@ -1,22 +1,13 @@
 .btn,
 .cmn--btn {
-	color: hsl(var(--dark)) !important;
-	padding: 12px 35px;
-	font-size: 19px;
+	padding: 10px 35px;
+	font-size: 16px;
 	font-weight: 500;
-	cursor: pointer;
-	outline: none;
+	outline: none !important;
+	box-shadow: none !important;
 	@extend %transition;
-	border-radius: 10px;
+	border-radius: 5px;
 	z-index: 1;
-	border: 0;
-	@include breakpoint(max-xl) {
-		font-size: 18px;
-	}
-	&:hover {
-		color: hsl(var(--dark)) !important;
-	}
-
 	&.btn--lg {
 		padding: 13px 35px !important;
 		font-size: 24px;
@@ -41,7 +32,7 @@
 	}
 }
 
-$colors: "primary" hsl(var(--primary)), "secondary" hsl(var(--secondary)), "success" hsl(var(--success)), "danger" hsl(var(--danger)), "warning" hsl(var(--warning)), "info" hsl(var(--info)), "light" hsl(var(--light)), "dark" hsl(var(--dark)), "base" rgb(var(--base));
+$colors: "primary" hsl(var(--primary)), "secondary" hsl(var(--secondary)), "success" hsl(var(--success)), "danger" hsl(var(--danger)), "warning" hsl(var(--warning)), "info" hsl(var(--info)), "light" hsl(var(--light)), "dark" hsl(var(--dark)), "base" var(--base);
 
 @each $name, $color in $colors {
 	.btn--#{$name} {

@@ -1,21 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap");
+
+$var: radial-gradient(108.3% 186.75% at -4.62% 9.78%, #f9636b 0%, #b6246e 100%);
+$var2: linear-gradient(90deg, #01c8ef -6.06%, #172f78 64.49%);
+$background: linear-gradient(90deg, #EA2391 -6.06%, #9C07A2 64.49%);
 
 :root {
 	// Fonts
-	--heading-font: "Mulish Mulish", sans-serif;
-	--body-font: "Mulish", sans-serif;
+	--heading-font: "Poppins", sans-serif;
+	--body-font: "Roboto", sans-serif;
 
 	//Colors
-	--heading: 18 15 42;
-	--body: 77 70 70;
-	--border: 0 0% 88%;
+	--heading: #212121;
+	--body: #757575;
+	--border: 0 0% 90%;
 	// Colors
-	--base: 39 107 255;
+	--base1: #BB296E;
+	--base2: #079ECF;
+
+	--color1: #f9636b; 
+	--color2: #b6246e;
+	--color3: #01c8ef;
+	--color4: #172f78;
+	--color5: #EA2391;
+	--color6: #9C07A2;
+
+	--gradient-one: radial-gradient(108.3% 186.75% at -4.62% 9.78%, var(--color1) 0%, var(--color2) 100%);
+	--gradient-two: linear-gradient(90deg, var(--color3) -6.06%, var(--color4) 64.49%);
+	--gradient-three: linear-gradient(90deg, var(--color5) -6.06%, var(--color6) 64.49%);
 
 	// Accent Color Shade
-	--accent-h: 205;
-	--accent-s: 100%;
-	--accent-l: 14%;
+	--accent-h: 260;
+	--accent-s: 92%;
+	--accent-l: 10%;
 	--accent-50: var(--accent-h) var(--accent-s) calc(var(--accent-l) + 25%);
 	--accent-100: var(--accent-h) var(--accent-s) calc(var(--accent-l) + 20%);
 	--accent-200: var(--accent-h) var(--accent-s) calc(var(--accent-l) + 15%);
@@ -37,8 +53,8 @@
 	--white: 0 0% 100%;
 
 	// Light Color Shade
-	--light-h: 140;
-	--light-s: 27%;
+	--light-h: 0;
+	--light-s: 0%;
 	--light-l: 98%;
 	--light-50: var(--light-h) var(--light-s) calc(var(--light-l) + 33%);
 	--light-100: var(--light-h) var(--light-s) calc(var(--light-l) + 20%);
@@ -50,19 +66,4 @@
 	--light-700: var(--light-h) var(--light-s) calc(var(--light-l) - 10%);
 	--light-800: var(--light-h) var(--light-s) calc(var(--light-l) - 15%);
 	--light-900: var(--light-h) var(--light-s) calc(var(--light-l) - 20%);
-
-	// Black Color Shade
-	--black-h: 0;
-	--black-s: 0%;
-	--black-l: 0%;
-	--black-50: var(--black-h) var(--black-s) calc(var(--black-l) + 33%);
-	--black-100: var(--black-h) var(--black-s) calc(var(--black-l) + 20%);
-	--black-200: var(--black-h) var(--black-s) calc(var(--black-l) + 15%);
-	--black-300: var(--black-h) var(--black-s) calc(var(--black-l) + 10%);
-	--black-400: var(--black-h) var(--black-s) calc(var(--black-l) + 5%);
-	--black: var(--black-h) var(--black-s) var(--black-l);
-	--black-600: var(--black-h) var(--black-s) calc(var(--black-l) - 5%);
-	--black-700: var(--black-h) var(--black-s) calc(var(--black-l) - 10%);
-	--black-800: var(--black-h) var(--black-s) calc(var(--black-l) - 15%);
-	--black-900: var(--black-h) var(--black-s) calc(var(--black-l) - 20%);
 }

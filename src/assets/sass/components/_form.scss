@@ -1,24 +1,16 @@
 .form-label {
 	font-size: 15px;
 }
-.form--control,
-.select2-container--default .select2-selection--single,
-.select2-container--default .select2-search--dropdown .select2-search__field {
+.form--control {
 	height: 50px;
 	border-radius: 5px;
 	border: 1px solid hsl(var(--border));
-	outline: 0;
-	box-shadow: none;
+	outline: 0 !important;
+	box-shadow: none !important;
 	&:focus {
 		color: var(--white);
-		border: 1px solid rgb(var(--base));
-		outline: 0;
-		box-shadow: none;
+		border: 1px solid var(--base1);
 	}
-}
-.form--control[type="file"] {
-	line-height: 25px;
-	padding: 12px 25px;
 }
 
 input:autofill,
@@ -31,18 +23,6 @@ input:-webkit-autofill:focus {
 	transition: background-color 5000s ease-in-out 0s;
 }
 
-.input-group > select {
-	position: relative;
-	flex: 1 1 auto;
-	width: 1%;
-	min-width: 0;
-}
-.input-group {
-	select {
-		background-color: transparent;
-		border: none;
-	}
-}
 .custom--radio {
 	position: relative;
 	padding-left: 0;
@@ -57,7 +37,7 @@ input:-webkit-autofill:focus {
 			~ label {
 				&::before {
 					border-width: 2px;
-					border-color: rgb(var(--base)) !important;
+					border-color: var(--base) !important;
 				}
 				&::after {
 					opacity: 1;
@@ -87,7 +67,7 @@ input:-webkit-autofill:focus {
 			left: 4px;
 			width: 7px;
 			height: 7px;
-			background-color: rgb(var(--base)) !important;
+			background-color: var(--base) !important;
 			opacity: 0;
 		}
 	}
@@ -100,7 +80,7 @@ input:-webkit-autofill:focus {
 			~ label {
 				&::before {
 					content: "\f14a";
-					color: rgb(var(--base));
+					color: var(--base);
 				}
 			}
 		}
@@ -125,39 +105,3 @@ input:-webkit-autofill:focus {
 	}
 }
 /* form css end*/
-
-// Select2 Css Starts
-.select2-container {
-	width: 100% !important;
-	> span {
-		width: 100%;
-	}
-}
-.select2-container--default .select2-search--dropdown .select2-search__field {
-	height: 45px;
-}
-.select2-container--default .select2-selection--single {
-	height: 50px;
-	display: flex;
-	align-items: center;
-	font-size: 16px;
-	padding-left: 15px;
-	span {
-		padding: 0 !important;
-		color: hsl(var(--dark)/.7) !important;
-	}
-	.select2-selection__arrow {
-		top: 5px;
-		right: 3px;
-		b {
-			top: 68%;
-		}
-	}
-}
-.dropdown-wrapper {
-	display: none;
-}
-.select2-dropdown {
-	border-color: rgba(0, 0, 0, 0.1);
-}
-// Select2 Css Ends

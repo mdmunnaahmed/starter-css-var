@@ -22,6 +22,9 @@
 .text--muted {
 	color: hsl(var(--muted)) !important;
 }
-.text--base {
-	color: rgb(var(--base)) !important;
+.text--base1 {
+	color: var(--base1) !important;
+}
+.text--base2 {
+	color: var(--base2) !important;
 }

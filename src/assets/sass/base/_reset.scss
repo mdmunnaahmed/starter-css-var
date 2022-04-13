@@ -7,11 +7,7 @@ body {
 	font-size: 16px;
 	color: var(--body);
 	line-height: 1.6;
-	font-family: var(--body-font)
-	// display: flex;
-	// flex-direction: column;
-	// justify-content: space-between;
-	// min-height: 100vh;
+	font-family: var(--body-font);
 }
 p {
 	margin: 0;
@@ -21,7 +17,7 @@ a {
 	text-decoration: none;
 	color: var(--body);
 	&:hover {
-		color: rgb(var(--base));
+		color: var(--base);
 	}
 }
 a,
