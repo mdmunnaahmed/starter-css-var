@@ -1,21 +1,18 @@
 .btn,
 .cmn--btn {
-	padding: 10px 35px;
-	font-size: 16px;
+	padding: 12px 35px;
 	font-weight: 500;
 	outline: none !important;
 	box-shadow: none !important;
 	@extend %transition;
 	border-radius: 5px;
 	z-index: 1;
+
 	&.btn--lg {
-		padding: 13px 35px !important;
-		font-size: 24px;
+		padding: 12px 35px !important;
+		font-size: 18px;
 		@include breakpoint(max-lg) {
-			font-size: 22px;
-		}
-		@include breakpoint(max-sm) {
-			font-size: 20px;
+			font-size: 16px;
 		}
 	}
 	&.btn--md {
@@ -32,12 +29,31 @@
 	}
 }
 
-$colors: "primary" hsl(var(--primary)), "secondary" hsl(var(--secondary)), "success" hsl(var(--success)), "danger" hsl(var(--danger)), "warning" hsl(var(--warning)), "info" hsl(var(--info)), "light" hsl(var(--light)), "dark" hsl(var(--dark)), "base" var(--base);
+$colors: "primary" hsl(var(--primary)), "secondary" hsl(var(--secondary)), "success" hsl(var(--success)), "danger" hsl(var(--danger)), "warning" hsl(var(--warning)), "info" var(--info), "light" hsl(var(--light)), "dark" hsl(var(--dark)), "base1" var(--base1);
 
 @each $name, $color in $colors {
 	.btn--#{$name} {
 		background-color: $color;
-		border: 1px solid $color;
-		color: var(--white);
+		border: 2px solid $color;
+		color: hsl(var(--white));
 	}
+}
+.btn--light {
+	color: var(--base1);
+}
+
+@each $name, $color in $colors {
+	.btn--outline-#{$name} {
+		background-color: transparent;
+		border: 2px solid $color;
+		color: $color;
+		&:hover {
+			color: var(--base1);
+			border-color: var(--base1);
+		}
+	}
+}
+.btn--outline-light {
+	color: var(--body);
+	border: 2px solid hsl(var(--border));
 }
