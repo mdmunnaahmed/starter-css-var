@@ -36,7 +36,12 @@
 %transition {
     transition: all 0.3s;
 }
-
+%text-wrap {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
 %line-ico {
     position: absolute;
     font-weight: 900;
