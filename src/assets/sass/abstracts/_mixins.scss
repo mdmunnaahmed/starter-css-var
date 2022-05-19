@@ -1,8 +1,4 @@
 // Color Mixin
-@mixin gradient-2($color1: var(--color3), $color2: var(--color4)) {
-	background-image: radial-gradient(108.3% 186.75% at -4.62% 9.78%, $color1 0%, $color2 100%);
-}
-
 @mixin text-wrap {
 	display: -webkit-box;
 	-webkit-box-orient: vertical;

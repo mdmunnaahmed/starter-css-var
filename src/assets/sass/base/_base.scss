@@ -14,7 +14,7 @@
 }
 a.text-white {
 	&:hover {
-		color: var(--base1);
+		color: rgb(var(--base));
 	}
 }
 ul {
@@ -33,4 +33,39 @@ ul {
 	&.active {
 		z-index: 111;
 	}
+}
+
+.scrollToTop {
+	width: 40px;
+	height: 40px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	color: #fff;
+	z-index: 9999;
+	bottom: 30px;
+	right: 30px;
+	font-size: 18px;
+	position: fixed;
+	-webkit-transform: translateY(150px);
+	transform: translateY(150px);
+	background: var(--main-color);
+	border-radius: 3px;
+}
+
+.scrollToTop:hover {
+	color: #fff;
+}
+
+.scrollToTop.active {
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+	-webkit-animation: bounceInDown 2s;
+	animation: bounceInDown 2s;
 }

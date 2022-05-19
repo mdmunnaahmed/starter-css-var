@@ -1,32 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap");
 
-$var: radial-gradient(108.3% 186.75% at -4.62% 9.78%, #f9636b 0%, #b6246e 100%);
-$var2: linear-gradient(90deg, #01c8ef -6.06%, #172f78 64.49%);
-$background: linear-gradient(90deg, #EA2391 -6.06%, #9C07A2 64.49%);
-
 :root {
 	// Fonts
 	--heading-font: "Poppins", sans-serif;
 	--body-font: "Roboto", sans-serif;
 
 	//Colors
-	--heading: #212121;
-	--body: #757575;
+	--heading: 0 0% 13%;
+	--body: 0 0% 46%;
 	--border: 0 0% 90%;
 	// Colors
-	--base1: #BB296E;
-	--base2: #079ECF;
-
-	--color1: #f9636b; 
-	--color2: #b6246e;
-	--color3: #01c8ef;
-	--color4: #172f78;
-	--color5: #EA2391;
-	--color6: #9C07A2;
-
-	--gradient-one: radial-gradient(108.3% 186.75% at -4.62% 9.78%, var(--color1) 0%, var(--color2) 100%);
-	--gradient-two: linear-gradient(90deg, var(--color3) -6.06%, var(--color4) 64.49%);
-	--gradient-three: linear-gradient(90deg, var(--color5) -6.06%, var(--color6) 64.49%);
+	--base: rgb(187, 41, 110);
 
 	// Accent Color Shade
 	--accent-h: 260;

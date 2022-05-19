@@ -9,7 +9,6 @@
 			font-weight: 600;
 			width: 45px;
 			height: 45px;
-			color: var(--body);
 			line-height: 45px;
 			padding: 0;
 			border-radius: 50% !important;
@@ -20,7 +19,6 @@
 		&:hover {
 			span,
 			a {
-				background: var(--gradient-one);
 				color: hsl(var(--white));
 				border-color: transparent;
 			}
@@ -29,8 +27,7 @@
 			cursor: no-drop !important;
 			span,
 			a {
-				color: var(--body) !important;
-				background: hsl(var(--dark)/.1);
+				background: hsl(var(--dark) / 0.1);
 				border: none;
 			}
 		}
