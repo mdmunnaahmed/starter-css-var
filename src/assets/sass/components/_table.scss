@@ -10,6 +10,8 @@
 					display: flex;
 					align-items: center;
 					justify-content: space-between;
+					gap: 35px;
+					text-align: right;
 					padding: 10px 15px;
 					border: none;
 					border-bottom: 1px solid hsl(var(--border));
@@ -20,15 +22,18 @@
 						border: none;
 					}
 					&::before {
-						content: attr(data-label);
-						font-family: var(--heading-font);
-						font-size: 16px;
-						color: var(--heading);
-						font-weight: 500;
-						@include breakpoint(max-sm) {
-							font-size: 15px;
-						}
+						display: block;
 					}
+				}
+			}
+		}
+	}
+
+	@include breakpoint(md) {
+		tbody {
+			tr {
+				td {
+					border: 0;
 				}
 			}
 		}
@@ -46,6 +51,8 @@
 					display: flex;
 					align-items: center;
 					justify-content: space-between;
+					gap: 35px;
+					text-align: right;
 					padding: 10px 15px;
 					border: none;
 					border-bottom: 1px solid hsl(var(--border));
@@ -56,15 +63,18 @@
 						border: none;
 					}
 					&::before {
-						content: attr(data-label);
-						font-family: var(--heading-font);
-						font-size: 16px;
-						color: hsl(var(--heading));
-						font-weight: 500;
-						@include breakpoint(max-sm) {
-							font-size: 15px;
-						}
+						display: block;
 					}
+				}
+			}
+		}
+	}
+
+	@include breakpoint(lg) {
+		tbody {
+			tr {
+				td {
+					border: 0;
 				}
 			}
 		}
@@ -82,6 +92,8 @@
 					display: flex;
 					align-items: center;
 					justify-content: space-between;
+					gap: 35px;
+					text-align: right;
 					padding: 10px 15px;
 					border: none;
 					border-bottom: 1px solid hsl(var(--border));
@@ -92,15 +104,18 @@
 						border: none;
 					}
 					&::before {
-						content: attr(data-label);
-						font-family: var(--heading-font);
-						font-size: 16px;
-						color: var(--heading);
-						font-weight: 500;
-						@include breakpoint(max-sm) {
-							font-size: 15px;
-						}
+						display: block;
 					}
+				}
+			}
+		}
+	}
+
+	@include breakpoint(xl) {
+		tbody {
+			tr {
+				td {
+					border: 0;
 				}
 			}
 		}
@@ -114,28 +129,31 @@
 	border-collapse: collapse;
 	thead {
 		tr {
-			// background: rgba($base-color,1);
+			background: rgb(var(--base));
 			th {
 				padding: 10px 15px;
 				font-family: var(--heading-font);
-				color: hsl(var(--white));
 				border: none;
 				font-size: 15px;
 				font-weight: 500;
-				border: 1px solid hsl(var(--border));
 			}
 		}
 	}
 	tbody {
+		border: 0;
 		font-size: 15px;
 		tr {
 			td {
-				color: hsl(var(--white));
 				vertical-align: middle;
 				padding: 10px 15px;
 				border-width: 1px;
-				@include breakpoint(lg) {
-					border-color: hsl(var(--border));
+				&::before {
+					content: attr(data-label);
+					font-family: var(--heading-font);
+					font-size: 15px;
+					color: hsl(var(--heading));
+					font-weight: 500;
+					display: none;
 				}
 			}
 		}
