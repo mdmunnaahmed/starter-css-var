@@ -38,9 +38,9 @@
 	--bg-white: 0 0% 100%;
 
 	// Light Color Shade
-	--light-h: 0;
-	--light-s: 0%;
-	--light-l: 98%;
+	--light-h: 238;
+	--light-s: 33%;
+	--light-l: 97%;
 	--light-50: var(--light-h) var(--light-s) calc(var(--light-l) + 33%);
 	--light-100: var(--light-h) var(--light-s) calc(var(--light-l) + 20%);
 	--light-200: var(--light-h) var(--light-s) calc(var(--light-l) + 15%);
