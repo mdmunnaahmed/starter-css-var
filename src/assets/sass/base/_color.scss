@@ -23,7 +23,9 @@
 	color: hsl(var(--muted)) !important;
 }
 
-
 .text--base {
 	color: rgb(var(--base)) !important;
+}
+.text--body {
+	color: hsl(var(--body)) !important;
 }

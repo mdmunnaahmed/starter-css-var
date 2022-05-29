@@ -1,0 +1,34 @@
+.list {
+	&.list-column {
+		@extend %flex;
+		flex-direction: column;
+	}
+	&.list-style-one {
+		li {
+			position: relative;
+			padding: 6px 0;
+			padding-left: 25px;
+			&::before {
+				@extend %font-ico;
+				content: "\f30b";
+				left: 0;
+				top: 6px;
+				color: rgb(var(--base));
+			}
+		}
+	}
+	&.list-style-two {
+		li {
+			padding: 6px 0;
+			padding-left: 25px;
+			position: relative;
+			&::before {
+				@extend %line-ico;
+				content: "\f101";
+				left: 0;
+				top: 6px;
+				color: rgb(var(--base));
+			}
+		}
+	}
+}

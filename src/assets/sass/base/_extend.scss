@@ -1,40 +1,40 @@
 %flex {
-    display: flex;
-    flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
 }
 %flex-center {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
 }
 %transform-center {
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
 }
 %position-set {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
 }
 %position {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
 }
 %position-relative {
-    position: relative;
+	position: relative;
 }
 %position-absolute {
-    position: absolute;
+	position: absolute;
 }
 %transition {
-    transition: all 0.3s;
+	transition: all 0.3s;
 }
 %text-wrap {
 	display: -webkit-box;
@@ -43,14 +43,22 @@
 	text-overflow: ellipsis;
 }
 %line-ico {
-    position: absolute;
-    font-weight: 900;
-    font-size: 16px;
-    font-family: "Line Awesome Free";
+	position: absolute;
+	font-weight: 900;
+	font-size: 16px;
+	font-family: "Line Awesome Free";
 }
 %font-ico {
-    position: absolute;
-    font-weight: 900;
-    font-size: 16px;
-    font-family: "Font Awesome 5 Free";
+	position: absolute;
+	font-weight: 900;
+	font-size: 16px;
+	font-family: "Font Awesome 5 Free";
+}
+
+%gradient-color {
+	-webkit-text-fill-color: transparent;
+	-moz-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	background-clip: text;
 }

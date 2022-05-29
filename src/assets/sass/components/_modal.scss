@@ -1,13 +1,13 @@
 .custom--modal .modal--footer,
 .custom--modal .modal--body,
 .custom--modal .modal--header {
-	border-color: var(--border) !important;
+	border-color: hsl(var(--border)) !important;
 }
 
 .custom--modal .modal--footer .modal-title,
 .custom--modal .modal--header .modal-title {
 	margin: 0;
-	color: var(--heading);
+	color: hsl(var(--heading));
 }
 
 .custom--modal .modal--footer .btn-close,

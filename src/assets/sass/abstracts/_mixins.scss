@@ -65,15 +65,6 @@
 }
 
 //Gadient Color Of Text
-@mixin gradient-color($gradient-color) {
-	background: $gradient-color;
-	-webkit-text-fill-color: transparent;
-	-moz-text-fill-color: transparent;
-	-webkit-background-clip: text;
-	-moz-background-clip: text;
-	background-clip: text;
-}
-
 @mixin hover-state {
 	&:hover,
 	&:active,
