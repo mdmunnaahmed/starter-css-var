@@ -1,16 +1,33 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap");
 
 :root {
 	// Fonts
-	--heading-font: "Poppins", sans-serif;
-	--body-font: "Roboto", sans-serif;
+	--heading-font: "Inter", sans-serif;
+	--body-font: "Assistant", sans-serif;
 
 	//Colors
-	--heading: 0 0% 13%;
-	--body: 0 0% 46%;
+	--heading: 232 33% 31%;
+	--body: 223 22% 41%;
 	--border: 0 0% 90%;
-	// Colors
-	--base: 187 41 110;
+
+	// Base Color Shade
+	--base-h: 258;
+	--base-s: 88%;
+	--base-l: 66%;
+	--base: var(--base-h) var(--base-s) var(--base-l);
+
+	--base-50: var(--base-h) var(--base-s) calc(var(--base-l) + 25%);
+	--base-100: var(--base-h) var(--base-s) calc(var(--base-l) + 20%);
+	--base-200: var(--base-h) var(--base-s) calc(var(--base-l) + 15%);
+	--base-300: var(--base-h) var(--base-s) calc(var(--base-l) + 10%);
+	--base-400: var(--base-h) var(--base-s) calc(var(--base-l) + 5%);
+	--base-500: var(--base-h) var(--base-s) calc(var(--base-l) - 5%);
+	--base-600: var(--base-h) var(--base-s) calc(var(--base-l) - 8%);
+	--base-700: var(--base-h) var(--base-s) calc(var(--base-l) - 10%);
+	--base-800: var(--base-h) var(--base-s) calc(var(--base-l) - 15%);
+	--base-900: var(--base-h) var(--base-s) calc(var(--base-l) - 20%);
+
+	--gradient-base: linear-gradient(270deg, hsl(var(--base-400)) 0%, hsl(var(--base-600)) 100%);
 
 	// Accent Color Shade
 	--accent-h: 260;
@@ -32,22 +49,21 @@
 	--success: 147 67% 47%;
 	--danger: 360 78% 62%;
 	--warning: 29 100% 63%;
-	--info: 203 89% 53%;
+	--info: 200 90% 53%;
 	--dark: 206 70% 11%;
 	--white: 0 0% 100%;
-	--bg-white: 0 0% 100%;
 
 	// Light Color Shade
-	--light-h: 238;
+	--light-h: 228;
 	--light-s: 33%;
 	--light-l: 97%;
 	--light-50: var(--light-h) var(--light-s) calc(var(--light-l) + 33%);
 	--light-100: var(--light-h) var(--light-s) calc(var(--light-l) + 20%);
 	--light-200: var(--light-h) var(--light-s) calc(var(--light-l) + 15%);
 	--light-300: var(--light-h) var(--light-s) calc(var(--light-l) + 10%);
-	--light-400: var(--light-h) var(--light-s) calc(var(--light-l) + 5%);
+	--light-400: var(--light-h) var(--light-s) calc(var(--light-l) + 2%);
 	--light: var(--light-h) var(--light-s) var(--light-l);
-	--light-600: var(--light-h) var(--light-s) calc(var(--light-l) - 5%);
+	--light-600: var(--light-h) var(--light-s) calc(var(--light-l) - 2%);
 	--light-700: var(--light-h) var(--light-s) calc(var(--light-l) - 10%);
 	--light-800: var(--light-h) var(--light-s) calc(var(--light-l) - 15%);
 	--light-900: var(--light-h) var(--light-s) calc(var(--light-l) - 20%);

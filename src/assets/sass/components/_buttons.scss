@@ -29,7 +29,7 @@
 	}
 }
 
-$colors: "primary" hsl(var(--primary)), "secondary" hsl(var(--secondary)), "success" hsl(var(--success)), "danger" hsl(var(--danger)), "warning" hsl(var(--warning)), "info" var(--info), "light" hsl(var(--light)), "dark" hsl(var(--dark)), "base" rgb(var(--base));
+$colors: "primary" hsl(var(--primary)), "secondary" hsl(var(--secondary)), "success" hsl(var(--success)), "danger" hsl(var(--danger)), "warning" hsl(var(--warning)), "info" var(--info), "light" hsl(var(--light)), "dark" hsl(var(--dark)), "base" hsl(var(--base));
 
 @each $name, $color in $colors {
 	.btn--#{$name} {
@@ -39,7 +39,7 @@ $colors: "primary" hsl(var(--primary)), "secondary" hsl(var(--secondary)), "succ
 	}
 }
 .btn--light {
-	color: rgb(var(--base));
+	color: hsl(var(--base));
 }
 
 @each $name, $color in $colors {
@@ -48,8 +48,8 @@ $colors: "primary" hsl(var(--primary)), "secondary" hsl(var(--secondary)), "succ
 		border: 2px solid $color;
 		color: $color;
 		&:hover {
-			color: rgb(var(--base));
-			border-color: rgb(var(--base));
+			color: hsl(var(--base));
+			border-color: hsl(var(--base));
 		}
 	}
 }

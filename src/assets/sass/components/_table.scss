@@ -5,7 +5,7 @@
 	border-collapse: collapse;
 	thead {
 		tr {
-			background: rgb(var(--base));
+			background: hsl(var(--base));
 			th {
 				padding: 10px 15px;
 				font-family: var(--heading-font);

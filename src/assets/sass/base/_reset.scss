@@ -17,7 +17,7 @@ a {
 	text-decoration: none;
 	color: hsl(var(--body));
 	&:hover {
-		color: rgb(var(--base));
+		color: hsl(var(--base));
 	}
 }
 a,

@@ -1,7 +1,7 @@
 .badge--base {
-	background-color: rgb(var(--base) / 0.15);
-	border: 1px solid rgb(var(--base));
-	color: rgb(var(--base));
+	background-color: hsl(var(--base) / 0.15);
+	border: 1px solid hsl(var(--base));
+	color: hsl(var(--base));
 }
 .badge--primary {
 	background-color: hsl(var(--primary) / 0.15);
@@ -58,7 +58,7 @@
 }
 
 // Badge Fill
-$colors: "primary" hsl(var(--primary)), "secondary" hsl(var(--secondary)), "success" hsl(var(--success)), "danger" hsl(var(--danger)), "warning" hsl(var(--warning)), "info" hsl(var(--info)), "light" hsl(var(--light)), "dark" hsl(var(--dark)), "base" rgb(var(--base));
+$colors: "primary" hsl(var(--primary)), "secondary" hsl(var(--secondary)), "success" hsl(var(--success)), "danger" hsl(var(--danger)), "warning" hsl(var(--warning)), "info" hsl(var(--info)), "light" hsl(var(--light)), "dark" hsl(var(--dark)), "base" hsl(var(--base));
 
 @each $name, $color in $colors {
 	.badge--fill-#{$name} {
