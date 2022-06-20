@@ -24,12 +24,13 @@ $(".menu li a").on("click", function () {
     }
 });
 
-// Responsive Menu
-var headerTrigger = $(".header-trigger");
-headerTrigger.on("click", function () {
-    $(".menu").toggleClass("active");
-    $(".overlay").toggleClass("active");
-});
+// Sticky Menu
+var header = document.querySelector(".header");
+if (header) {
+	window.addEventListener("scroll", function () {
+		header.classList.toggle("sticky", window.scrollY > 0);
+	});
+}
 
 // Overlay Event
 var over = $(".overlay");
