@@ -5,23 +5,13 @@
 
 .custom--card .card-header,
 .custom--card .card-footer {
-	color: hsl(var(--dark)) !important;
+	background: hsl(var(--base));
 	text-align: center;
 	.title {
 		color: hsl(var(--white));
 		margin: 0;
 	}
 }
-
-.custom--card.card--primary .card-header,
-.custom--card.card--primary .card-footer {
-	background: hsl(var(--base));
-}
-.custom--card.card--base .card-header,
-.custom--card.card--base .card-footer {
-	background: hsl(var(--base));
-}
-
 .custom--card .card-header,
 .custom--card .card-footer {
 	padding: 15px 25px;

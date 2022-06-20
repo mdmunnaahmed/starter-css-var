@@ -18,13 +18,30 @@ h4 > a,
 h5 > a,
 h6 > a {
 	color: hsl(var(--heading));
-	word-break: break-word;
 }
 h1 {
 	font-size: 70px;
+	@include breakpoint(max-xl) {
+		font-size: 50px;
+	}
+	@include breakpoint(max-lg) {
+		font-size: 48px;
+	}
+	@include breakpoint(max-md) {
+		font-size: 42px;
+	}
+	@include breakpoint(max-sm) {
+		font-size: 36px;
+	}
 }
 h2 {
 	font-size: 50px;
+	@include breakpoint(max-md) {
+		font-size: 36px;
+	}
+	@include breakpoint(max-sm) {
+		font-size: 32px;
+	}
 }
 
 h3 {
@@ -32,9 +49,18 @@ h3 {
 }
 h4 {
 	font-size: 24px;
+	@include breakpoint(max-xl) {
+		font-size: 22px;
+	}
+	@include breakpoint(max-sm) {
+		font-size: 20px;
+	}
 }
 h5 {
 	font-size: 20px;
+	@include breakpoint(max-xl) {
+		font-size: 18px;
+	}
 }
 h6 {
 	font-size: 18px;

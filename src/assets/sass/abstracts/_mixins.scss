@@ -72,40 +72,6 @@
 		@content;
 	}
 }
-@mixin hover-full-state {
-	&:hover,
-	&:active,
-	&:focus,
-	&.active {
-		@content;
-	}
-}
-@mixin hover-focus-state {
-	&:hover,
-	&:focus {
-		@content;
-	}
-}
-@mixin active-focus-state {
-	&:active,
-	&.active,
-	&:focus {
-		@content;
-	}
-}
-@mixin hover-active-state {
-	&:hover,
-	&:active,
-	&.active {
-		@content;
-	}
-}
-@mixin before-after-state {
-	&:before,
-	&:after {
-		@content;
-	}
-}
 
 // media query mixin
 @mixin min($value) {

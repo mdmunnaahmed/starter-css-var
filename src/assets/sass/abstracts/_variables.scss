@@ -16,7 +16,6 @@
 	--base-l: 66%;
 	--base: var(--base-h) var(--base-s) var(--base-l);
 
-	--base-50: var(--base-h) var(--base-s) calc(var(--base-l) + 25%);
 	--base-100: var(--base-h) var(--base-s) calc(var(--base-l) + 20%);
 	--base-200: var(--base-h) var(--base-s) calc(var(--base-l) + 15%);
 	--base-300: var(--base-h) var(--base-s) calc(var(--base-l) + 10%);
@@ -26,8 +25,6 @@
 	--base-700: var(--base-h) var(--base-s) calc(var(--base-l) - 10%);
 	--base-800: var(--base-h) var(--base-s) calc(var(--base-l) - 15%);
 	--base-900: var(--base-h) var(--base-s) calc(var(--base-l) - 20%);
-
-	--gradient-base: linear-gradient(270deg, hsl(var(--base-400)) 0%, hsl(var(--base-600)) 100%);
 
 	// Accent Color Shade
 	--accent-h: 260;

@@ -3,17 +3,45 @@
 		@extend %flex;
 		flex-direction: column;
 	}
-	&.list-style-one {
+	&.list-style-check {
 		li {
 			position: relative;
-			padding: 6px 0;
-			padding-left: 25px;
+			padding: 7px 0;
+			padding-left: 28px;
+			font-size: 14px;
+			&.active {
+				color: hsl(var(--heading));
+				&::before {
+					content: "\f00c";
+				}
+			}
+			&.disabled {
+				color: hsl(var(--body) / 0.65);
+				&::before {
+					content: "\f00d";
+				}
+			}
 			&::before {
-				@extend %font-ico;
-				content: "\f30b";
+				@extend %line-ico;
 				left: 0;
 				top: 6px;
-				color: hsl(var(--base));
+			}
+		}
+	}
+	&.list-style-one {
+		li {
+			padding: 6px 0;
+			padding-left: 25px;
+			position: relative;
+			&::before {
+				position: absolute;
+				content: "";
+				left: 0;
+				width: 10px;
+				height: 10px;
+				top: 12px;
+				background-color: hsl(var(--base));
+				border-radius: 50%;
 			}
 		}
 	}
@@ -28,6 +56,34 @@
 				left: 0;
 				top: 6px;
 				color: hsl(var(--base));
+			}
+		}
+	}
+	&.list-50-sm {
+		@include breakpoint(sm) {
+			li {
+				width: 50%;
+			}
+		}
+	}
+	&.list-50-md {
+		@include breakpoint(md) {
+			li {
+				width: 50%;
+			}
+		}
+	}
+	&.list-50-lg {
+		@include breakpoint(lg) {
+			li {
+				width: 50%;
+			}
+		}
+	}
+	&.list-50-xl {
+		@include breakpoint(xl) {
+			li {
+				width: 50%;
 			}
 		}
 	}

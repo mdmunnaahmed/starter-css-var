@@ -11,6 +11,9 @@
 		border: 1px solid hsl(var(--base));
 	}
 }
+textarea.form--control {
+	height: 130px;
+}
 
 input:autofill,
 input:autofill:hover,

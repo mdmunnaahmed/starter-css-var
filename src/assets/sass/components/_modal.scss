@@ -1,17 +1,17 @@
-.custom--modal .modal--footer,
-.custom--modal .modal--body,
-.custom--modal .modal--header {
+.custom--modal .modal-footer,
+.custom--modal .modal-body,
+.custom--modal .modal-header {
 	border-color: hsl(var(--border)) !important;
 }
 
-.custom--modal .modal--footer .modal-title,
-.custom--modal .modal--header .modal-title {
+.custom--modal .modal-footer .modal-title,
+.custom--modal .modal-header .modal-title {
 	margin: 0;
 	color: hsl(var(--heading));
 }
 
-.custom--modal .modal--footer .btn-close,
-.custom--modal .modal--header .btn-close {
+.custom--modal .modal-footer .btn-close,
+.custom--modal .modal-header .btn-close {
 	background: transparent;
 	font-size: 20px;
 	line-height: 1;

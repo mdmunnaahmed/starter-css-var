@@ -100,7 +100,7 @@
 		left: 0px;
 		opacity: 0;
 		visibility: hidden;
-		min-width: 230px;
+		min-width: 200px;
 		@include transition;
 		transform: translateY(15px);
 		box-shadow: 0 3px 12px 3px hsl(var(--base) / 0.15);
