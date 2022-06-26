@@ -38,16 +38,8 @@ over.on("click", function () {
     $(".overlay").removeClass("overlay-color");
     $(".overlay").removeClass("active");
     $(".menu, .header-trigger").removeClass("active");
-    $(".header-top").removeClass("active");
 });
 
-// Sticky Menu
-window.addEventListener("scroll", function () {
-    var header = document.querySelector(".header");
-    if ($(".header")) {
-        header.classList.toggle("sticky", window.scrollY > 0);
-    }
-});
 
 // Scroll To Top
 var scrollTop = $(".scrollToTop");
@@ -113,7 +105,7 @@ $(".testimonial-slider").slick({
 
 
 // Odometer Counter
-$(".counter__item, .dashboard__card__item").each(function () {
+$(".counter-item").each(function () {
     $(this).isInViewport(function (status) {
         if (status === "entered") {
             for (
@@ -148,11 +140,6 @@ $(".faq-item__title").on("click", function (e) {
             .find(".faq-item__content")
             .slideUp(300, "swing");
     }
-});
-
-$(".btn-close, .overlay").on("click", function () {
-    $(".overlay").removeClass("active");
-    $(".menu").removeClass("active");
 });
 
 $(".video-button").magnificPopup({
