@@ -268,7 +268,7 @@ ul {
     flex-wrap: wrap;
 }
 
-.header-trigger span::after, .header-trigger span::before, .custom--checkbox label::before, .btn,
+.header-trigger span::after, .header-trigger span::before, .header, .custom--checkbox label::before, .btn,
 .cmn--btn, a,
 img,
 .name {
@@ -1350,25 +1350,32 @@ input:-webkit-autofill:focus {
     border: none;
 }
 
-.header-bottom {
+.header {
+    position: sticky;
     width: 100%;
-    padding: 20px 0;
+    top: 0;
+    z-index: 111;
 }
 
-@media (max-width: 991px) {
-    .header-bottom {
-        padding: 15px 0;
-    }
+.header.sticky {
+    background-color: hsl(var(--white));
+    box-shadow: 0 3px 15px hsl(var(--dark)/0.1);
 }
 
 .header-bottom-area {
     justify-content: space-between;
-    position: relative;
+    padding: 10px 0;
+}
+
+@media (min-width: 768px) {
+    .header-bottom-area {
+        position: relative;
+    }
 }
 
 .logo img {
-    max-width: 180px;
-    max-height: 60px;
+    max-width: 200px;
+    max-height: 50px;
 }
 
 @media (max-width: 1199px) {
@@ -1385,7 +1392,7 @@ input:-webkit-autofill:focus {
 
 @media (max-width: 575px) {
     .logo img {
-        max-width: 100px;
+        max-width: 130px;
         max-height: 50px;
     }
 }
@@ -1422,10 +1429,6 @@ input:-webkit-autofill:focus {
     }
 }
 
-.menu li {
-    position: relative;
-}
-
 .menu li:hover > .sub-menu {
     visibility: visible;
     opacity: 1;
@@ -1450,31 +1453,41 @@ input:-webkit-autofill:focus {
     display: block;
     padding: 4px 15px;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 500;
     text-transform: uppercase;
     position: relative;
 }
 
-.menu .btn-close {
+.menu .menu-close {
     position: absolute;
-    right: 20px;
-    top: 20px;
+    right: 0px;
+    top: 0px;
+    z-index: 1;
 }
 
 @media (min-width: 992px) {
+    .menu li {
+        position: relative;
+    }
+
+    .menu li a {
+        padding: 15px;
+    }
+
     .sub-menu {
         position: absolute;
         top: 100%;
         left: 0px;
         opacity: 0;
         visibility: hidden;
-        min-width: 200px;
+        min-width: 220px;
         transition: all ease 0.3s;
         transform: translateY(15px);
-        box-shadow: 0 3px 12px 3px hsl(var(--base)/0.15);
+        box-shadow: 0 3px 12px 3px hsl(var(--dark)/0.05);
         overflow: hidden;
         z-index: 11;
         padding: 10px;
+        background-color: hsl(var(--white));
     }
 
     .sub-menu li {
@@ -1494,12 +1507,6 @@ input:-webkit-autofill:focus {
         overflow: hidden;
         text-overflow: ellipsis;
         -webkit-line-clamp: 1;
-    }
-
-    .sub-menu li a:hover {
-        padding-left: 20px;
-        background: hsl(var(--base));
-        color: hsl(var(--heading)) !important;
     }
 
     .sub-menu:hover {
@@ -1526,11 +1533,15 @@ input:-webkit-autofill:focus {
         border-bottom: none;
     }
 
+    .menu > li:nth-child(1) {
+        border-bottom: none;
+    }
+
     .menu {
         position: absolute;
         top: 0;
         left: 0;
-        padding: 50px 30px 50px;
+        padding: 30px;
         max-height: calc(100vh - 50px);
         min-width: 200px;
         width: 100%;
@@ -1540,7 +1551,7 @@ input:-webkit-autofill:focus {
         opacity: 0;
         overflow-y: auto;
         transition: all ease 0.3s;
-        background: hsl(var(--base));
+        background: hsl(var(--accent));
     }
 
     .menu.active {
@@ -1562,6 +1573,7 @@ input:-webkit-autofill:focus {
     .menu li {
         padding: 3px 0;
         width: 100%;
+        border-bottom: 1px solid hsl(var(--white)/0.1);
     }
 
     .menu li:nth-last-child(1) {
