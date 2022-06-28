@@ -1367,7 +1367,7 @@ input:-webkit-autofill:focus {
     padding: 10px 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 576px) {
     .header-bottom-area {
         position: relative;
     }
@@ -1381,6 +1381,7 @@ input:-webkit-autofill:focus {
 @media (max-width: 1199px) {
     .logo img {
         max-width: 160px;
+        max-height: 45px;
     }
 }
 
@@ -1393,7 +1394,6 @@ input:-webkit-autofill:focus {
 @media (max-width: 575px) {
     .logo img {
         max-width: 130px;
-        max-height: 50px;
     }
 }
 
@@ -1466,6 +1466,10 @@ input:-webkit-autofill:focus {
 }
 
 @media (min-width: 992px) {
+    .menu {
+        display: flex !important;
+    }
+
     .menu li {
         position: relative;
     }
@@ -1539,27 +1543,16 @@ input:-webkit-autofill:focus {
 
     .menu {
         position: absolute;
-        top: 0;
+        top: 100%;
         left: 0;
         padding: 30px;
         max-height: calc(100vh - 50px);
         min-width: 200px;
         width: 100%;
-        visibility: hidden;
         transform-origin: top;
-        transform: translateY(-100px) scaleY(0.6);
-        opacity: 0;
         overflow-y: auto;
-        transition: all ease 0.3s;
         background: hsl(var(--accent));
-    }
-
-    .menu.active {
-        opacity: 1;
-        transform: translateY(0) scaleY(1);
-        visibility: visible;
-        z-index: 999;
-        top: 0px;
+        display: none;
     }
 
     .menu .has-sub-menu {
@@ -1567,7 +1560,7 @@ input:-webkit-autofill:focus {
     }
 
     .menu .has-sub-menu > a::after {
-        transform: translate(-20px, -50%) !important;
+        transform: translate(0px, -50%) !important;
     }
 
     .menu li {
@@ -1586,7 +1579,7 @@ input:-webkit-autofill:focus {
     }
 
     .menu li.has-sub-menu a::after {
-        transform: translate(-20px, -50%) !important;
+        transform: translate(0px, -50%) !important;
     }
 
     .sub-menu {

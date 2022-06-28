@@ -14,7 +14,7 @@
 	@extend %flex;
 	justify-content: space-between;
 	padding: 10px 0;
-	@include breakpoint(md) {
+	@include breakpoint(sm) {
 		position: relative;
 	}
 }
@@ -24,13 +24,13 @@
 		max-height: 50px;
 		@include breakpoint(max-xl) {
 			max-width: 160px;
+			max-height: 45px;
 		}
 		@include breakpoint(max-md) {
 			max-width: 150px;
 		}
 		@include breakpoint(max-sm) {
 			max-width: 130px;
-			max-height: 50px;
 		}
 	}
 }
@@ -100,6 +100,9 @@
 
 // Sub Menu
 @include breakpoint(lg) {
+	.menu {
+		display: flex !important;
+	}
 	.menu li {
 		position: relative;
 	}
@@ -167,32 +170,22 @@
 	}
 	.menu {
 		position: absolute;
-		top: 0;
+		top: 100%;
 		left: 0;
 		padding: 30px;
 		max-height: calc(100vh - 50px);
 		min-width: 200px;
 		width: 100%;
-		visibility: hidden;
 		transform-origin: top;
-		transform: translateY(-100px) scaleY(0.6);
-		opacity: 0;
 		overflow-y: auto;
-		@include transition;
 		background: hsl(var(--accent));
-		&.active {
-			opacity: 1;
-			transform: translateY(0) scaleY(1);
-			visibility: visible;
-			z-index: 999;
-			top: 0px;
-		}
+		display: none;
 		.has-sub-menu {
 			margin-right: 0;
 		}
 		.has-sub-menu > a {
 			&::after {
-				transform: translate(-20px, -50%) !important;
+				transform: translate(0px, -50%) !important;
 			}
 		}
 		li {
@@ -209,7 +202,7 @@
 			&.has-sub-menu {
 				a {
 					&::after {
-						transform: translate(-20px, -50%) !important;
+						transform: translate(0px, -50%) !important;
 					}
 				}
 			}
