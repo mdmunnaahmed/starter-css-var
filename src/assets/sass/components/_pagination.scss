@@ -4,8 +4,7 @@
 	gap: 12px;
 	.page-item {
 		text-align: center;
-		a,
-		span {
+		.page-link {
 			font-weight: 600;
 			width: 45px;
 			height: 45px;
@@ -14,19 +13,20 @@
 			border-radius: 50% !important;
 			border-color: hsl(var(--border));
 			box-shadow: none;
+			background-color: hsl(var(--dark) / 0.1);
+			color: hsl(var(--dark));
 		}
 		&.active,
 		&:hover {
-			span,
-			a {
+			.page-link {
 				color: hsl(var(--white));
-				border-color: transparent;
+				border-color: hsl(var(--base));
+				background-color: hsl(var(--base));
 			}
 		}
 		&.disabled {
 			cursor: no-drop !important;
-			span,
-			a {
+			.page-link {
 				background: hsl(var(--dark) / 0.1);
 				border: none;
 			}
