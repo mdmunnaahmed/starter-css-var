@@ -1,0 +1,22 @@
+// Section Header Starts Here
+.section-header {
+	margin-bottom: 40px;
+	@include breakpoint(lg) {
+		margin-bottom: 50px;
+	}
+    &__subtitle {
+        margin-bottom: 15px;
+    }
+    &__title {
+        margin-bottom: 25px;
+    }
+}
+// Section Header Ends Here
+
+
+// Brand Section Starts Here
+.brand-item {
+    max-width: 200px;
+    margin: 0 auto;
+}
+// Brand Section Ends Here

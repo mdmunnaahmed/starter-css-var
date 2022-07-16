@@ -1,0 +1,110 @@
+// Banner Section Starts Here
+.banner-section {
+	padding-top: 150px;
+	padding-bottom: 100px;
+	@include breakpoint(max-lg) {
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+	@include breakpoint(max-md) {
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
+}
+.banner-content {
+	@include breakpoint(md) {
+		max-width: 50%;
+	}
+	@include breakpoint(max-md) {
+		margin-top: 60px;
+		text-align: center;
+	}
+	&__subtitle {
+		margin-bottom: 10px;
+		@include breakpoint(md) {
+			margin-bottom: 20px;
+		}
+	}
+	&__title {
+		margin-bottom: 10px;
+		@include breakpoint(md) {
+			margin-bottom: 20px;
+		}
+	}
+	.cmn--btn {
+		margin-top: 20px;
+		@include breakpoint(md) {
+			margin-top: 30px;
+		}
+	}
+}
+.banner-thumb {
+	position: relative;
+	padding-left: 20px;
+	@include breakpoint(md) {
+		max-width: 50%;
+		padding-left: 40px;
+	}
+	@include breakpoint(max-sm) {
+		margin-right: 15px;
+	}
+
+	&::before {
+		position: absolute;
+		content: "";
+		height: 150px;
+		left: 150px;
+		top: -25px;
+		right: -25px;
+		background-color: hsl(var(--base) / 0.3);
+		@include breakpoint(md) {
+			height: 300px;
+			left: 150px;
+			top: -40px;
+			right: -40px;
+		}
+		@include breakpoint(sm) {
+			height: 250px;
+		}
+	}
+	&::after {
+		position: absolute;
+		content: "";
+		height: 150px;
+		left: 100px;
+		bottom: -20px;
+		right: -15px;
+		background-color: hsl(var(--base) / 0.3);
+		@include breakpoint(md) {
+			height: 300px;
+			left: 150px;
+			bottom: -30px;
+			right: -25px;
+		}
+		@include breakpoint(sm) {
+			height: 250px;
+		}
+	}
+	.bg-shape {
+		position: absolute;
+		height: 200px;
+		left: 25px;
+		bottom: -10px;
+		background-color: hsl(var(--base) / 0.3);
+		width: 200px;
+		@include breakpoint(md) {
+			height: 150px;
+			left: 15px;
+			bottom: -15px;
+			width: 300px;
+		}
+		@include breakpoint(max-md) {
+			left: 5px;
+		}
+	}
+	img {
+		position: relative;
+		z-index: 1;
+	}
+}
+// Banner Section Ends Here
