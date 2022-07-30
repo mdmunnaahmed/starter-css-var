@@ -1,13 +1,14 @@
 // Header Section Starts Here
 .header {
-	position: sticky;
+	position: fixed;
 	width: 100%;
 	top: 0;
 	z-index: 111;
 	@extend %transition;
 	&.sticky {
-		background-color: hsl(var(--white));
+		background-color: hsl(var(--accent));
 		box-shadow: 0 3px 15px hsl(var(--dark) / 0.1);
+		border-bottom: 1px solid hsl(var(--white) / 0.15);
 	}
 }
 .header-bottom-area {
@@ -42,16 +43,15 @@
 	margin: 0;
 	position: relative;
 	> .has-sub-menu {
-		margin-right: 20px;
-		@include breakpoint(max-xl) {
-			margin-right: 18px;
-		}
 		&.open {
 			.sub-menu {
 				@include breakpoint(lg) {
 					display: block !important;
 				}
 			}
+		}
+		a {
+			padding-right: 35px;
 		}
 	}
 	.sub-menu {
@@ -77,17 +77,9 @@
 				content: "\f107";
 				right: 0;
 				top: 50%;
-				transform: translate(8px, -50%);
+				transform: translate(-13px, -50%);
 				font-size: 14px;
 			}
-		}
-		a {
-			display: block;
-			padding: 4px 15px;
-			font-size: 15px;
-			font-weight: 500;
-			text-transform: uppercase;
-			position: relative;
 		}
 	}
 	.menu-close {
@@ -106,8 +98,11 @@
 	.menu li {
 		position: relative;
 	}
-	.menu li a {
-		padding: 15px;
+	.menu > li > a {
+		padding: 15px 20px;
+		&.active {
+			color: hsl(var(--base));
+		}
 	}
 	.sub-menu {
 		position: absolute;
@@ -115,25 +110,26 @@
 		left: 0px;
 		opacity: 0;
 		visibility: hidden;
-		min-width: 220px;
+		min-width: 200px;
 		@include transition;
 		transform: translateY(15px);
 		box-shadow: 0 3px 12px 3px hsl(var(--dark) / 0.05);
 		overflow: hidden;
 		z-index: 11;
-		padding: 10px;
-		background-color: hsl(var(--white));
 		li {
 			padding: 0;
+			border-bottom: 1px dashed hsl(var(--dark) / 0.1);
 			&:last-child {
 				border: none;
 			}
 			a {
-				font-size: 14px;
-				padding: 7px 15px;
+				padding: 6px 15px;
 				display: block;
 				@include text-wrap;
 				-webkit-line-clamp: 1;
+				&:hover, &.active {
+					color: hsl(var(--base));
+				}
 			}
 		}
 		&:hover {
@@ -164,9 +160,6 @@
 		&:nth-last-child(1) {
 			border-bottom: none;
 		}
-		&:nth-child(1) {
-			border-bottom: none;
-		}
 	}
 	.menu {
 		position: absolute;
@@ -189,7 +182,7 @@
 			}
 		}
 		li {
-			padding: 3px 0;
+			padding: 4px 0;
 			width: 100%;
 			border-bottom: 1px solid hsl(var(--white) / 0.1);
 			&:nth-last-child(1) {
@@ -223,11 +216,11 @@
 			background: none !important;
 			&::before {
 				transform: rotate(-45deg) translate(-11px, 0px);
-				background: hsl(var(--white));
+				width: 100%;
 			}
 			&::after {
 				transform: rotate(45deg) translate(-11px, 0px);
-				background: hsl(var(--white));
+				width: 100%;
 			}
 		}
 	}
@@ -243,14 +236,16 @@
 			content: "";
 			width: 100%;
 			height: 100%;
-			left: 0;
+			right: 0;
 			background: hsl(var(--base));
 			@extend %transition;
 		}
 		&::after {
 			bottom: -8px;
+			width: 28px;
 		}
 		&::before {
+			width: 32px;
 			top: -8px;
 		}
 	}

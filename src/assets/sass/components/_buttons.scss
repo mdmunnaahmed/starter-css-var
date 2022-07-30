@@ -7,7 +7,6 @@
 	@extend %transition;
 	border-radius: 5px;
 	z-index: 1;
-
 	&.btn--lg {
 		padding: 12px 35px !important;
 		font-size: 18px;
@@ -28,6 +27,37 @@
 		font-size: 13px;
 	}
 }
+.cmn--btn {
+	border: 3px solid hsl(var(--base-900));
+	color: hsl(var(--white));
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	@include breakpoint(max-sm) {
+		padding: 8px 30px;
+	}
+	&::before {
+		@extend %position-set;
+		width: 200%;
+		background: linear-gradient(90deg, hsl(var(--base)) 0%, hsl(var(--base-900)) 50%, hsl(var(--base)) 100%);
+		z-index: -1;
+		@extend %transition;
+	}
+	&:hover,
+	&.active {
+		color: hsl(var(--white));
+		&::before {
+			left: -50%;
+		}
+	}
+	&.active {
+		&:hover {
+			&::before {
+				left: 0;
+			}
+		}
+	}
+}
 
 $colors: "primary" hsl(var(--primary)), "secondary" hsl(var(--secondary)), "success" hsl(var(--success)), "danger" hsl(var(--danger)), "warning" hsl(var(--warning)), "info" var(--info), "light" hsl(var(--light)), "dark" hsl(var(--dark)), "base" hsl(var(--base));
 
@@ -36,6 +66,9 @@ $colors: "primary" hsl(var(--primary)), "secondary" hsl(var(--secondary)), "succ
 		background-color: $color;
 		border: 2px solid $color;
 		color: hsl(var(--white));
+		&:hover {
+			color: $color;
+		}
 	}
 }
 .btn--light {
@@ -48,8 +81,9 @@ $colors: "primary" hsl(var(--primary)), "secondary" hsl(var(--secondary)), "succ
 		border: 2px solid $color;
 		color: $color;
 		&:hover {
-			color: hsl(var(--base));
-			border-color: hsl(var(--base));
+			color: hsl(var(--white));
+			border-color: $color;
+			background-color: $color;
 		}
 	}
 }

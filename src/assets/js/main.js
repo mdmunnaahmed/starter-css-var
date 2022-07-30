@@ -13,6 +13,7 @@ if (trigger || dropdown) {
 		$(this).on("click", function (e) {
 			e.stopPropagation();
 			dropdown.slideToggle();
+			trigger.toggleClass("active");
 		});
 	});
 	dropdown.each(function () {
@@ -23,6 +24,7 @@ if (trigger || dropdown) {
 	$(document).on("click", function () {
 		if (parseInt(screenSize) < parseInt(991)) {
 			dropdown.slideUp();
+			trigger.removeClass("active");
 		}
 	});
 }
