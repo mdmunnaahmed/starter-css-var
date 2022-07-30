@@ -3,12 +3,12 @@
 :root {
     --heading-font: "Inter", sans-serif;
     --body-font: "Assistant", sans-serif;
-    --heading: 232 33% 31%;
-    --body: 223 22% 41%;
+    --heading: 0 0% 0%;
+    --body: 223 22% 1%;
     --border: 0 0% 90%;
-    --base-h: 258;
-    --base-s: 88%;
-    --base-l: 66%;
+    --base-h: 347;
+    --base-s: 72%;
+    --base-l: 49%;
     --base: var(--base-h) var(--base-s) var(--base-l);
     --base-100: var(--base-h) var(--base-s) calc(var(--base-l) + 20%);
     --base-200: var(--base-h) var(--base-s) calc(var(--base-l) + 15%);
@@ -40,9 +40,9 @@
     --info: 200 90% 53%;
     --dark: 206 70% 11%;
     --white: 0 0% 100%;
-    --light-h: 228;
-    --light-s: 33%;
-    --light-l: 97%;
+    --light-h: 148;
+    --light-s: 0%;
+    --light-l: 95%;
     --light-50: var(--light-h) var(--light-s) calc(var(--light-l) + 33%);
     --light-100: var(--light-h) var(--light-s) calc(var(--light-l) + 20%);
     --light-200: var(--light-h) var(--light-s) calc(var(--light-l) + 15%);
@@ -83,6 +83,11 @@ sub,
 sup,
 a {
     display: inline-block;
+}
+
+.custom-container {
+    max-width: 1250px;
+    margin: 0 auto;
 }
 
 /* global css strat */
@@ -228,7 +233,7 @@ ul {
 }
 
 .pt-100 {
-    padding-top: clamp(60px, 6vw, 100px);
+    padding-top: clamp(55px, 6vw, 100px);
 }
 
 .pt-80 {
@@ -240,7 +245,7 @@ ul {
 }
 
 .pt-50 {
-    padding-top: clamp(30px, 6vw, 50px);
+    padding-top: clamp(35px, 6vw, 50px);
 }
 
 .pb-120 {
@@ -248,7 +253,7 @@ ul {
 }
 
 .pb-100 {
-    padding-bottom: clamp(60px, 6vw, 100px);
+    padding-bottom: clamp(55px, 6vw, 100px);
 }
 
 .pb-80 {
@@ -260,7 +265,95 @@ ul {
 }
 
 .pb-50 {
-    padding-bottom: clamp(30px, 6vw, 50px);
+    padding-bottom: clamp(35px, 6vw, 50px);
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mt-15 {
+    margin-top: 15px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mt-25 {
+    margin-top: 25px;
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+.mt-35 {
+    margin-top: 35px;
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+.mt-45 {
+    margin-top: 45px;
+}
+
+.mt-50 {
+    margin-top: 50px;
+}
+
+.mt-55 {
+    margin-top: 55px;
+}
+
+.mt-60 {
+    margin-top: 60px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-15 {
+    margin-bottom: 15px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-25 {
+    margin-bottom: 25px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.mb-35 {
+    margin-bottom: 35px;
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+.mb-45 {
+    margin-bottom: 45px;
+}
+
+.mb-50 {
+    margin-bottom: 50px;
+}
+
+.mb-55 {
+    margin-bottom: 55px;
+}
+
+.mb-60 {
+    margin-bottom: 60px;
 }
 
 .menu, .header-bottom-area, .pagination, .list.list-column {
@@ -400,46 +493,40 @@ h6 > a {
 }
 
 h1 {
-    font-size: 70px;
+    font-size: 45px;
 }
 
 @media (max-width: 1199px) {
     h1 {
-        font-size: 50px;
-    }
-}
-
-@media (max-width: 991px) {
-    h1 {
-        font-size: 48px;
+        font-size: 40px;
     }
 }
 
 @media (max-width: 767px) {
     h1 {
-        font-size: 42px;
+        font-size: 36px;
     }
 }
 
 @media (max-width: 575px) {
     h1 {
-        font-size: 36px;
+        font-size: 30px;
     }
 }
 
 h2 {
-    font-size: 50px;
+    font-size: 30px;
 }
 
 @media (max-width: 767px) {
     h2 {
-        font-size: 36px;
+        font-size: 26px;
     }
 }
 
 @media (max-width: 575px) {
     h2 {
-        font-size: 32px;
+        font-size: 22px;
     }
 }
 
@@ -463,7 +550,7 @@ h4 {
     font-size: 24px;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 767px) {
     h4 {
         font-size: 22px;
     }
@@ -472,6 +559,22 @@ h4 {
 @media (max-width: 575px) {
     h4 {
         font-size: 20px;
+    }
+}
+
+h4 {
+    font-size: 22px;
+}
+
+@media (max-width: 1199px) {
+    h4 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 575px) {
+    h4 {
+        font-size: 18px;
     }
 }
 
@@ -523,8 +626,8 @@ h6 {
 
 .btn,
 .cmn--btn {
-    padding: 10px 35px;
-    font-weight: 500;
+    padding: 12px 35px;
+    font-weight: 600;
     outline: none !important;
     box-shadow: none !important;
     border-radius: 5px;
@@ -533,7 +636,7 @@ h6 {
 
 .btn.btn--lg,
 .cmn--btn.btn--lg {
-    padding: 12px 35px !important;
+    padding: 13px 35px !important;
     font-size: 18px;
 }
 
@@ -592,6 +695,17 @@ h6 {
 
 .cmn--btn.active:hover::before {
     left: 0;
+}
+
+.cmn--btn {
+    background-color: hsl(var(--base));
+    color: hsl(var(--white));
+}
+
+.cmn--btn:hover {
+    background-color: transparent;
+    border-color: hsl(var(--base));
+    color: hsl(var(--base));
 }
 
 .btn--primary {
@@ -1217,7 +1331,7 @@ input:-webkit-autofill:focus {
     margin-bottom: 0;
     position: relative;
     padding-left: 20px;
-    font-size: rem(14px);
+    font-size: 14px;
     font-weight: 400;
 }
 
@@ -1243,7 +1357,7 @@ input:-webkit-autofill:focus {
 }
 
 .custom--checkbox {
-    padding-left: rem(25px);
+    padding-left: 25px;
 }
 
 .custom--checkbox input {
@@ -1257,7 +1371,7 @@ input:-webkit-autofill:focus {
 
 .custom--checkbox label {
     position: relative;
-    font-size: rem(15px);
+    font-size: 15px;
     font-weight: 400;
     cursor: pointer;
     margin-bottom: 0;
@@ -1269,8 +1383,8 @@ input:-webkit-autofill:focus {
     font-family: "Line Awesome Free";
     font-weight: 900;
     top: 3px;
-    left: rem(-25px);
-    font-size: rem(20px);
+    left: -25px;
+    font-size: 20px;
     line-height: 1;
 }
 
@@ -1416,21 +1530,19 @@ input:-webkit-autofill:focus {
 
 .pagination .page-item .page-link {
     font-weight: 600;
-    width: 45px;
-    height: 45px;
-    line-height: 45px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
     padding: 0;
-    border-radius: 50% !important;
     border-color: hsl(var(--border));
     box-shadow: none;
-    background-color: hsl(var(--dark)/0.1);
-    color: hsl(var(--dark));
+    color: hsl(var(--body));
 }
 
 .pagination .page-item.active .page-link, .pagination .page-item:hover .page-link {
     color: hsl(var(--white));
-    border-color: hsl(var(--base));
     background-color: hsl(var(--base));
+    border-color: transparent;
 }
 
 .pagination .page-item.disabled {
@@ -1438,6 +1550,7 @@ input:-webkit-autofill:focus {
 }
 
 .pagination .page-item.disabled .page-link {
+    color: hsl(var(--body));
     background: hsl(var(--dark)/0.1);
     border: none;
 }

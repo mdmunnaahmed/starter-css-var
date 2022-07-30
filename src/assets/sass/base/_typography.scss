@@ -19,27 +19,24 @@ h6 > a {
 	color: hsl(var(--heading));
 }
 h1 {
-	font-size: 70px;
+	font-size: 45px;
 	@include breakpoint(max-xl) {
-		font-size: 50px;
-	}
-	@include breakpoint(max-lg) {
-		font-size: 48px;
+		font-size: 40px;
 	}
 	@include breakpoint(max-md) {
-		font-size: 42px;
+		font-size: 36px;
 	}
 	@include breakpoint(max-sm) {
-		font-size: 36px;
+		font-size: 30px;
 	}
 }
 h2 {
-	font-size: 50px;
+	font-size: 30px;
 	@include breakpoint(max-md) {
-		font-size: 36px;
+		font-size: 26px;
 	}
 	@include breakpoint(max-sm) {
-		font-size: 32px;
+		font-size: 22px;
 	}
 }
 
@@ -54,11 +51,20 @@ h3 {
 }
 h4 {
 	font-size: 24px;
-	@include breakpoint(max-xl) {
+	@include breakpoint(max-md) {
 		font-size: 22px;
 	}
 	@include breakpoint(max-sm) {
 		font-size: 20px;
+	}
+}
+h4 {
+	font-size: 22px;
+	@include breakpoint(max-xl) {
+		font-size: 20px;
+	}
+	@include breakpoint(max-sm) {
+		font-size: 18px;
 	}
 }
 h5 {

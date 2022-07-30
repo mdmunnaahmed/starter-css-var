@@ -6,14 +6,14 @@
 	--body-font: "Assistant", sans-serif;
 
 	//Colors
-	--heading: 232 33% 31%;
-	--body: 223 22% 41%;
+	--heading: 0 0% 0%;
+	--body: 223 22% 1%;
 	--border: 0 0% 90%;
 
 	// Base Color Shade
-	--base-h: 258;
-	--base-s: 88%;
-	--base-l: 66%;
+	--base-h: 347;
+	--base-s: 72%;
+	--base-l: 49%;
 	--base: var(--base-h) var(--base-s) var(--base-l);
 
 	--base-100: var(--base-h) var(--base-s) calc(var(--base-l) + 20%);
@@ -51,9 +51,9 @@
 	--white: 0 0% 100%;
 
 	// Light Color Shade
-	--light-h: 228;
-	--light-s: 33%;
-	--light-l: 97%;
+	--light-h: 148;
+	--light-s: 0%;
+	--light-l: 95%;
 	--light-50: var(--light-h) var(--light-s) calc(var(--light-l) + 33%);
 	--light-100: var(--light-h) var(--light-s) calc(var(--light-l) + 20%);
 	--light-200: var(--light-h) var(--light-s) calc(var(--light-l) + 15%);

@@ -6,27 +6,26 @@
 		text-align: center;
 		.page-link {
 			font-weight: 600;
-			width: 45px;
-			height: 45px;
-			line-height: 45px;
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
 			padding: 0;
-			border-radius: 50% !important;
 			border-color: hsl(var(--border));
 			box-shadow: none;
-			background-color: hsl(var(--dark) / 0.1);
-			color: hsl(var(--dark));
+			color: hsl(var(--body));
 		}
 		&.active,
 		&:hover {
 			.page-link {
 				color: hsl(var(--white));
-				border-color: hsl(var(--base));
 				background-color: hsl(var(--base));
+				border-color: transparent;
 			}
 		}
 		&.disabled {
 			cursor: no-drop !important;
 			.page-link {
+				color: hsl(var(--body));
 				background: hsl(var(--dark) / 0.1);
 				border: none;
 			}
