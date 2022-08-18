@@ -27,47 +27,6 @@
 		font-size: 13px;
 	}
 }
-.cmn--btn {
-	border: 3px solid hsl(var(--base-900));
-	color: hsl(var(--white));
-	position: relative;
-	z-index: 1;
-	overflow: hidden;
-	@include breakpoint(max-sm) {
-		padding: 8px 30px;
-	}
-	&::before {
-		@extend %position-set;
-		width: 200%;
-		background: linear-gradient(90deg, hsl(var(--base)) 0%, hsl(var(--base-900)) 50%, hsl(var(--base)) 100%);
-		z-index: -1;
-		@extend %transition;
-	}
-	&:hover,
-	&.active {
-		color: hsl(var(--white));
-		&::before {
-			left: -50%;
-		}
-	}
-	&.active {
-		&:hover {
-			&::before {
-				left: 0;
-			}
-		}
-	}
-}
-
-.cmn--btn {
-	background-color: hsl(var(--base));
-	color: hsl(var(--white));
-	&:hover {
-		background-color: transparent;
-		border-color: hsl(var(--base));
-		color: hsl(var(--base));
-	}
-}
 
 $colors: "primary" hsl(var(--primary)), "secondary" hsl(var(--secondary)), "success" hsl(var(--success)), "danger" hsl(var(--danger)), "warning" hsl(var(--warning)), "info" var(--info), "light" hsl(var(--light)), "dark" hsl(var(--dark)),
 	"base" hsl(var(--base));

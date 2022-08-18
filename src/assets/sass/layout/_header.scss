@@ -1,8 +1,8 @@
 // Header Section Starts Here
 .header {
-	position: fixed;
-	width: 100%;
+	position: sticky;
 	top: 0;
+	width: 100%;
 	z-index: 111;
 	@extend %transition;
 	&.sticky {
@@ -82,12 +82,6 @@
 			}
 		}
 	}
-	.menu-close {
-		position: absolute;
-		right: 0px;
-		top: 0px;
-		z-index: 1;
-	}
 }
 
 // Sub Menu
@@ -127,7 +121,8 @@
 				display: block;
 				@include text-wrap;
 				-webkit-line-clamp: 1;
-				&:hover, &.active {
+				&:hover,
+				&.active {
 					color: hsl(var(--base));
 				}
 			}

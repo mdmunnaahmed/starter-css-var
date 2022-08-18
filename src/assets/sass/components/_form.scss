@@ -11,6 +11,10 @@
 		border: 1px solid hsl(var(--base));
 	}
 }
+.form--control[readonly] {
+	border-color: hsl(var(--border));
+	background-color: hsl(var(--light));
+}
 textarea.form--control {
 	height: 130px;
 }
@@ -38,7 +42,7 @@ input:-webkit-autofill:focus {
 		&:checked {
 			~ label {
 				&::before {
-					border-width: 2px;
+					border-width: 1px;
 					border-color: hsl(var(--base)) !important;
 				}
 				&::after {
@@ -60,7 +64,8 @@ input:-webkit-autofill:focus {
 			left: 0;
 			width: 15px;
 			height: 15px;
-			border: 1px solid #888888;
+			border: 1px solid #999;
+			border-radius: 50%;
 		}
 		&::after {
 			position: absolute;
@@ -71,38 +76,7 @@ input:-webkit-autofill:focus {
 			height: 7px;
 			background-color: hsl(var(--base)) !important;
 			opacity: 0;
-		}
-	}
-}
-.custom--checkbox {
-	padding-left: 25px;
-	input {
-		display: none;
-		&:checked {
-			~ label {
-				&::before {
-					content: "\f14a";
-					color: hsl(var(--base));
-				}
-			}
-		}
-	}
-	label {
-		position: relative;
-		font-size: 15px;
-		font-weight: 400;
-		cursor: pointer;
-		margin-bottom: 0;
-		&::before {
-			position: absolute;
-			content: "\f04d";
-			font-family: "Line Awesome Free";
-			font-weight: 900;
-			top: 3px;
-			left: -25px;
-			font-size: 20px;
-			line-height: 1;
-			@extend %transition;
+			border-radius: 50%;
 		}
 	}
 }

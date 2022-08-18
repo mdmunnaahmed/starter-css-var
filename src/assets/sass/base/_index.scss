@@ -1,6 +1,9 @@
 // base sass
+@import "./base/reset";
 @import "./base/base";
-@import "./base/spacing";
-@import "./base/extend";
-@import "./base/list-style";
 @import "./base/typography";
+@import "./base/color";
+@import "./base/bg";
+@import "./base/extend";
+@import "./base/spacing";
+@import "./base/list-style";

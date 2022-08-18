@@ -29,22 +29,20 @@ if (trigger || dropdown) {
 	});
 }
 
-$(".menu-close").on("click", function () {
-	$(".menu").slideUp();
+// Submenu Click Event
+$(".menu li a").on("click", function (e) {
+	if (parseInt(screenSize) < parseInt(991)) {
+		$(this).siblings(".sub-menu").slideToggle();
+	}
 });
 
 //Menu Dropdown
 $("ul>li>.sub-menu").parent("li").addClass("has-sub-menu");
 
+// Detect Screen Size
 let screenSize = window.innerWidth;
 window.addEventListener("resize", function (e) {
 	screenSize = window.innerWidth;
-});
-
-$(".menu li a").on("click", function (e) {
-	if (parseInt(screenSize) < parseInt(991)) {
-		$(this).siblings(".sub-menu").slideToggle();
-	}
 });
 
 // Sticky Menu
@@ -55,7 +53,7 @@ if (header) {
 	});
 }
 
-// Scroll To Top
+// Scroll To Top Event
 var scrollTop = $(".scrollToTop");
 $(window).on("scroll", function () {
 	if ($(this).scrollTop() < 500) {
@@ -65,7 +63,7 @@ $(window).on("scroll", function () {
 	}
 });
 
-//Click event to scroll to top
+// Click event to scroll to top
 $(".scrollToTop").on("click", function () {
 	$("html, body").animate(
 		{
@@ -76,6 +74,7 @@ $(".scrollToTop").on("click", function () {
 	return false;
 });
 
+// Slider Part
 $(".brand-slider").slick({
 	fade: false,
 	slidesToShow: 6,
@@ -131,26 +130,28 @@ if (counter) {
 	});
 }
 
-//Faq
+//Faq Click Event
 $(".faq-item__title").on("click", function (e) {
 	var element = $(this).parent(".faq-item");
 	if (element.hasClass("open")) {
 		element.removeClass("open");
 		element.find(".faq-item__content").removeClass("open");
-		element.find(".faq-item__content").slideUp(300, "swing");
+		element.find(".faq-item__content").slideUp(300);
 	} else {
 		element.addClass("open");
-		element.children(".faq-item__content").slideDown(300, "swing");
-		element.siblings(".faq-item").children(".faq-item__content").slideUp(300, "swing");
+		element.children(".faq-item__content").slideDown(300);
+		element.siblings(".faq-item").children(".faq-item__content").slideUp(300);
 		element.siblings(".faq-item").removeClass("open");
-		element.siblings(".faq-item").find(".faq-item__content").slideUp(300, "swing");
+		element.siblings(".faq-item").find(".faq-item__content").slideUp(300);
 	}
 });
 
-$(".video-button").magnificPopup({
-	type: "iframe",
-	// other options
-});
+var videoItem = $(".video-pop");
+if (videoItem) {
+	videoItem.magnificPopup({
+		type: "iframe",
+	});
+}
 
 // Active Path Active
 var path = location.pathname.split("/");
