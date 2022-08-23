@@ -3,6 +3,11 @@
 	border: 1px solid hsl(var(--base));
 	color: hsl(var(--base));
 }
+.badge--accent {
+	background-color: hsl(var(--accent) / 0.15);
+	border: 1px solid hsl(var(--accent));
+	color: hsl(var(--accent));
+}
 .badge--primary {
 	background-color: hsl(var(--primary) / 0.15);
 	border: 1px solid hsl(var(--primary));
@@ -38,12 +43,17 @@
 	border: 1px solid hsl(var(--dark));
 	color: hsl(var(--dark));
 }
+.badge--white {
+	background-color: hsl(var(--white) / 0.15);
+	border: 1px solid hsl(var(--white));
+	color: hsl(var(--white));
+}
 
 .badge {
 	border-radius: 18px;
 	padding: 4px 15px;
 	&.badge--icon {
-		padding: 5px;
+		padding: 6px;
 		border-radius: 5px;
 	}
 	&.badge--lg {
@@ -58,7 +68,7 @@
 }
 
 // Badge Fill
-$colors: "primary" hsl(var(--primary)), "secondary" hsl(var(--secondary)), "success" hsl(var(--success)), "danger" hsl(var(--danger)), "warning" hsl(var(--warning)), "info" hsl(var(--info)), "light" hsl(var(--light)), "dark" hsl(var(--dark)), "base" hsl(var(--base));
+$colors: "primary" hsl(var(--primary)), "secondary" hsl(var(--secondary)), "success" hsl(var(--success)), "danger" hsl(var(--danger)), "warning" hsl(var(--warning)), "info" hsl(var(--info)), "white" hsl(var(--white)), "dark" hsl(var(--dark)), "base" hsl(var(--base));
 
 @each $name, $color in $colors {
 	.badge--fill-#{$name} {

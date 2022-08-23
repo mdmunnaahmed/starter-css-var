@@ -20,7 +20,6 @@
 	--base-200: var(--base-h) var(--base-s) calc(var(--base-l) + 15%);
 	--base-300: var(--base-h) var(--base-s) calc(var(--base-l) + 10%);
 	--base-400: var(--base-h) var(--base-s) calc(var(--base-l) + 5%);
-	--base-500: var(--base-h) var(--base-s) calc(var(--base-l) - 5%);
 	--base-600: var(--base-h) var(--base-s) calc(var(--base-l) - 8%);
 	--base-700: var(--base-h) var(--base-s) calc(var(--base-l) - 10%);
 	--base-800: var(--base-h) var(--base-s) calc(var(--base-l) - 15%);
@@ -30,17 +29,33 @@
 	--accent-h: 260;
 	--accent-s: 92%;
 	--accent-l: 10%;
+	--accent: var(--accent-h) var(--accent-s) var(--accent-l);
 	--accent-50: var(--accent-h) var(--accent-s) calc(var(--accent-l) + 25%);
 	--accent-100: var(--accent-h) var(--accent-s) calc(var(--accent-l) + 20%);
 	--accent-200: var(--accent-h) var(--accent-s) calc(var(--accent-l) + 15%);
 	--accent-300: var(--accent-h) var(--accent-s) calc(var(--accent-l) + 10%);
 	--accent-400: var(--accent-h) var(--accent-s) calc(var(--accent-l) + 5%);
-	--accent: var(--accent-h) var(--accent-s) var(--accent-l);
 	--accent-600: var(--accent-h) var(--accent-s) calc(var(--accent-l) - 5%);
 	--accent-700: var(--accent-h) var(--accent-s) calc(var(--accent-l) - 10%);
 	--accent-800: var(--accent-h) var(--accent-s) calc(var(--accent-l) - 15%);
 	--accent-900: var(--accent-h) var(--accent-s) calc(var(--accent-l) - 20%);
 
+	// Light Color Shade
+	--light-h: 148;
+	--light-s: 0%;
+	--light-l: 95%;
+	--light: var(--light-h) var(--light-s) var(--light-l);
+	--light-50: var(--light-h) var(--light-s) calc(var(--light-l) + 33%);
+	--light-100: var(--light-h) var(--light-s) calc(var(--light-l) + 20%);
+	--light-200: var(--light-h) var(--light-s) calc(var(--light-l) + 15%);
+	--light-300: var(--light-h) var(--light-s) calc(var(--light-l) + 10%);
+	--light-400: var(--light-h) var(--light-s) calc(var(--light-l) + 2%);
+	--light-600: var(--light-h) var(--light-s) calc(var(--light-l) - 2%);
+	--light-700: var(--light-h) var(--light-s) calc(var(--light-l) - 10%);
+	--light-800: var(--light-h) var(--light-s) calc(var(--light-l) - 15%);
+	--light-900: var(--light-h) var(--light-s) calc(var(--light-l) - 20%);
+
+	// Fixed Colors
 	--primary: 245 82% 67%;
 	--secondary: 210 7% 56%;
 	--success: 147 67% 47%;
@@ -49,19 +64,4 @@
 	--info: 200 90% 53%;
 	--dark: 206 70% 11%;
 	--white: 0 0% 100%;
-
-	// Light Color Shade
-	--light-h: 148;
-	--light-s: 0%;
-	--light-l: 95%;
-	--light-50: var(--light-h) var(--light-s) calc(var(--light-l) + 33%);
-	--light-100: var(--light-h) var(--light-s) calc(var(--light-l) + 20%);
-	--light-200: var(--light-h) var(--light-s) calc(var(--light-l) + 15%);
-	--light-300: var(--light-h) var(--light-s) calc(var(--light-l) + 10%);
-	--light-400: var(--light-h) var(--light-s) calc(var(--light-l) + 2%);
-	--light: var(--light-h) var(--light-s) var(--light-l);
-	--light-600: var(--light-h) var(--light-s) calc(var(--light-l) - 2%);
-	--light-700: var(--light-h) var(--light-s) calc(var(--light-l) - 10%);
-	--light-800: var(--light-h) var(--light-s) calc(var(--light-l) - 15%);
-	--light-900: var(--light-h) var(--light-s) calc(var(--light-l) - 20%);
 }

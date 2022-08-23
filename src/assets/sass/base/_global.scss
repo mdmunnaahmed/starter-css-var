@@ -1,0 +1,193 @@
+html {
+	scroll-behavior: smooth;
+	font-size: 100%;
+}
+body {
+	padding: 0;
+	margin: 0;
+	font-size: 1rem;
+	line-height: 1.7;
+	color: hsl(var(--body));
+	font-family: var(--body-font);
+}
+a {
+	text-decoration: none;
+	color: hsl(var(--body));
+	&:hover {
+		color: hsl(var(--base));
+	}
+}
+a,
+img,
+.name {
+	@extend %transition;
+}
+span,
+sub,
+sup,
+a {
+	display: inline-block;
+}
+
+.bg_img {
+	background-position: center;
+	background-size: cover !important;
+	background-repeat: no-repeat !important;
+}
+.bg_fixed {
+	background-attachment: fixed !important;
+}
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 111;
+	visibility: hidden;
+	opacity: 0;
+	@extend %transition;
+	&.active {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+.scrollToTop {
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: hsl(var(--white));
+	z-index: 9999;
+	bottom: 30px;
+	right: 30px;
+	font-size: 18px;
+	position: fixed;
+	transform: translateY(150px);
+	background: hsl(var(--base));
+	border-radius: 3px;
+}
+
+.scrollToTop:hover {
+	color: hsl(var(--white));
+}
+
+.scrollToTop.active {
+	transform: translateY(0);
+	animation: bounceInDown 2s;
+}
+
+.fs--12px {
+	font-size: 12px !important;
+}
+.fs--13px {
+	font-size: 13px !important;
+}
+.fs--14px {
+	font-size: 14px !important;
+}
+.fs--15px {
+	font-size: 15px !important;
+}
+.fs--16px {
+	font-size: 16px !important;
+}
+.fs--18px {
+	font-size: 18px !important;
+}
+.fs--20px {
+	font-size: 20px !important;
+}
+.fs--22px {
+	font-size: 22px !important;
+}
+.fs--24px {
+	font-size: 24px !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	font-weight: 700;
+	line-height: 1.3;
+	color: hsl(var(--heading));
+	font-family: var(--heading-font);
+}
+h1 > a,
+h2 > a,
+h3 > a,
+h4 > a,
+h5 > a,
+h6 > a {
+	color: hsl(var(--heading));
+}
+h1 {
+	font-size: 45px;
+	@include breakpoint(max-xl) {
+		font-size: 40px;
+	}
+	@include breakpoint(max-md) {
+		font-size: 36px;
+	}
+	@include breakpoint(max-sm) {
+		font-size: 30px;
+	}
+}
+h2 {
+	font-size: 30px;
+	@include breakpoint(max-md) {
+		font-size: 26px;
+	}
+	@include breakpoint(max-sm) {
+		font-size: 22px;
+	}
+}
+
+h3 {
+	font-size: 30px;
+	@include breakpoint(max-xl) {
+		font-size: 26px;
+	}
+	@include breakpoint(max-xs) {
+		font-size: 24px;
+	}
+}
+h4 {
+	font-size: 24px;
+	@include breakpoint(max-md) {
+		font-size: 22px;
+	}
+	@include breakpoint(max-sm) {
+		font-size: 20px;
+	}
+}
+h4 {
+	font-size: 22px;
+	@include breakpoint(max-xl) {
+		font-size: 20px;
+	}
+	@include breakpoint(max-sm) {
+		font-size: 18px;
+	}
+}
+h5 {
+	font-size: 20px;
+	@include breakpoint(max-xl) {
+		font-size: 18px;
+	}
+}
+h6 {
+	font-size: 18px;
+}
