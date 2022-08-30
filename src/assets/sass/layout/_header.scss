@@ -5,18 +5,10 @@
 	width: 100%;
 	z-index: 111;
 	@extend %transition;
+	background-color: hsl(var(--white));
 	&.sticky {
-		background-color: hsl(var(--accent));
 		box-shadow: 0 3px 15px hsl(var(--dark) / 0.1);
 		border-bottom: 1px solid hsl(var(--white) / 0.15);
-	}
-}
-.header-bottom-area {
-	@extend %flex;
-	justify-content: space-between;
-	padding: 10px 0;
-	@include breakpoint(sm) {
-		position: relative;
 	}
 }
 .logo {
@@ -42,33 +34,18 @@
 	align-items: center;
 	margin: 0;
 	position: relative;
-	> .has-sub-menu {
-		&.open {
-			.sub-menu {
-				@include breakpoint(lg) {
-					display: block !important;
-				}
-			}
-		}
-		a {
-			padding-right: 35px;
+	> .has-submenu {
+		.menu-text {
+			padding-right: 20px !important;
 		}
 	}
 	.sub-menu {
-		li {
+		.menu-item {
 			width: 100%;
 		}
-		@include breakpoint(lg) {
-			display: block !important;
-		}
 	}
-	li {
-		&:hover > .sub-menu {
-			visibility: visible;
-			opacity: 1;
-			transform: translateY(0);
-		}
-		&.has-sub-menu > a {
+	.menu-item {
+		&.has-submenu > .menu-link {
 			position: relative;
 			display: flex;
 			justify-content: space-between;
@@ -77,47 +54,55 @@
 				content: "\f107";
 				right: 0;
 				top: 50%;
-				transform: translate(-13px, -50%);
-				font-size: 14px;
+				transform: translate(0, -50%);
+				font-size: 13px;
 			}
 		}
 	}
 }
+.header-trigger-wrapper {
+	display: none;
+}
 
-// Sub Menu
+// Sub Menu (Desktop Menu)
 @include breakpoint(lg) {
-	.menu {
-		display: flex !important;
-	}
-	.menu li {
+	.menu-item {
 		position: relative;
+		&:hover > .sub-menu {
+			visibility: visible;
+			opacity: 1;
+			transform: translate(0, 0);
+		}
 	}
-	.menu > li > a {
-		padding: 15px 20px;
+	.menu {
+		gap: 0 40px;
+	}
+	.menu > .menu-item > .menu-link {
+		padding: 15px 0;
 		&.active {
 			color: hsl(var(--base));
 		}
 	}
+
 	.sub-menu {
 		position: absolute;
 		top: 100%;
-		left: 0px;
+		left: 0%;
 		opacity: 0;
 		visibility: hidden;
 		min-width: 200px;
 		@include transition;
-		transform: translateY(15px);
-		box-shadow: 0 3px 12px 3px hsl(var(--dark) / 0.05);
-		overflow: hidden;
+		transform: translate(0, 10px);
+		box-shadow: 0 1px 4px 1px hsl(var(--dark) / 0.05);
 		z-index: 11;
-		li {
+		padding: 10px 0;
+		.menu-item {
 			padding: 0;
-			border-bottom: 1px dashed hsl(var(--dark) / 0.1);
 			&:last-child {
 				border: none;
 			}
-			a {
-				padding: 6px 15px;
+			.menu-link {
+				padding: 5px 20px;
 				display: block;
 				@include text-wrap;
 				-webkit-line-clamp: 1;
@@ -130,7 +115,7 @@
 		&:hover {
 			visibility: visible;
 			opacity: 1;
-			transform: translateY(0);
+			transform: translate(0, 0);
 		}
 
 		.sub-menu {
@@ -138,10 +123,17 @@
 			opacity: 0;
 			top: 5px;
 			left: -100%;
-			transform: translateY(-20px);
+			transform: translate(0, -20px);
+		}
+		.menu-item {
+			&:hover > .sub-menu {
+				visibility: visible;
+				opacity: 1;
+				transform: translate(0%, 0);
+			}
 		}
 
-		&.has-sub-menu > a {
+		&.has-submenu > .menu-text {
 			&::after {
 				transform: translateY(0px);
 			}
@@ -151,7 +143,7 @@
 
 // Mobile Menu
 @include breakpoint(max-lg) {
-	.menu > li {
+	.menu > .menu-item {
 		&:nth-last-child(1) {
 			border-bottom: none;
 		}
@@ -168,27 +160,27 @@
 		overflow-y: auto;
 		background: hsl(var(--accent));
 		display: none;
-		.has-sub-menu {
+		.has-submenu {
 			margin-right: 0;
 		}
-		.has-sub-menu > a {
+		.has-submenu > .menu-link {
 			&::after {
 				transform: translate(0px, -50%) !important;
 			}
 		}
-		li {
+		.menu-item {
 			padding: 4px 0;
 			width: 100%;
 			border-bottom: 1px solid hsl(var(--white) / 0.1);
 			&:nth-last-child(1) {
 				border-bottom: none;
 			}
-			a {
+			.menu-link {
 				padding-left: 0;
 				color: hsl(var(--white));
 			}
-			&.has-sub-menu {
-				a {
+			&.has-submenu {
+				.menu-link {
 					&::after {
 						transform: translate(0px, -50%) !important;
 					}
@@ -200,48 +192,53 @@
 		display: none;
 		padding-left: 25px;
 	}
-}
 
-// Trigger
-.header-trigger {
-	cursor: pointer;
-	margin-top: -10px;
-	&.active {
+	// Trigger
+	.header-trigger-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+	.header-trigger {
+		cursor: pointer;
+		margin-top: -10px;
 		span {
-			background: none !important;
+			width: 25px;
+			height: 2px;
+			background: hsl(var(--base));
+			position: relative;
+			@include transition;
+			&::after,
 			&::before {
-				transform: rotate(-45deg) translate(-11px, 0px);
+				position: absolute;
+				content: "";
 				width: 100%;
+				height: 100%;
+				right: 0;
+				background: hsl(var(--base));
+				@include transition;
 			}
 			&::after {
-				transform: rotate(45deg) translate(-11px, 0px);
-				width: 100%;
+				bottom: -8px;
+				width: 28px;
+			}
+			&::before {
+				width: 32px;
+				top: -8px;
 			}
 		}
-	}
-	span {
-		width: 25px;
-		height: 2px;
-		background: hsl(var(--base));
-		position: relative;
-		transition: all ease 0.3s;
-		&::after,
-		&::before {
-			position: absolute;
-			content: "";
-			width: 100%;
-			height: 100%;
-			right: 0;
-			background: hsl(var(--base));
-			@extend %transition;
-		}
-		&::after {
-			bottom: -8px;
-			width: 28px;
-		}
-		&::before {
-			width: 32px;
-			top: -8px;
+		&.active {
+			span {
+				background: none;
+				&::before {
+					transform: rotate(-45deg) translate(-11px, 0px);
+					width: 100%;
+				}
+				&::after {
+					transform: rotate(45deg) translate(-11px, 0px);
+					width: 100%;
+				}
+			}
 		}
 	}
 }

@@ -30,14 +30,14 @@ if (trigger || dropdown) {
 }
 
 // Submenu Click Event
-$(".menu li a").on("click", function (e) {
+$(".menu .menu-item .menu-link").on("click", function (e) {
 	if (parseInt(screenSize) < parseInt(991)) {
 		$(this).siblings(".sub-menu").slideToggle();
 	}
 });
 
 //Menu Dropdown
-$("ul>li>.sub-menu").parent("li").addClass("has-sub-menu");
+$("ul>li>.sub-menu").parent("li").addClass("has-submenu");
 
 // Detect Screen Size
 let screenSize = window.innerWidth;
