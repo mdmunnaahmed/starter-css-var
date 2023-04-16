@@ -164,15 +164,7 @@ h3 {
 		font-size: 24px;
 	}
 }
-h4 {
-	font-size: 24px;
-	@include breakpoint(max-md) {
-		font-size: 22px;
-	}
-	@include breakpoint(max-sm) {
-		font-size: 20px;
-	}
-}
+
 h4 {
 	font-size: 22px;
 	@include breakpoint(max-xl) {
