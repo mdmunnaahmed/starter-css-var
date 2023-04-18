@@ -7,17 +7,17 @@
  * Copyright (c) 2020 Animate.css
  */
 :root {
-    --animate-duration: 1s;
-    --animate-delay: 1s;
-    --animate-repeat: 1;
+    --animate-duration: 1s !important;
+    --animate-delay: 1s !important;
+    --animate-repeat: 1 !important;
 }
 .wow {
-    -webkit-animation-duration: var(--animate-duration);
-    animation-duration: var(--animate-duration);
-    -webkit-animation-duration: var(--animate-duration);
-    animation-duration: var(--animate-duration);
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
+    -webkit-animation-duration: var(--animate-duration) !important;
+    animation-duration: var(--animate-duration) !important;
+    -webkit-animation-duration: var(--animate-duration) !important;
+    animation-duration: var(--animate-duration) !important;
+    -webkit-animation-fill-mode: both !important;
+    animation-fill-mode: both !important;
 }
 /* Custom Animation Start */
 @keyframes play-button {
@@ -106,7 +106,7 @@
     -webkit-animation-duration: calc(var(--animate-duration) * 3);
     animation-duration: calc(var(--animate-duration) * 3);
 }
-@media (prefers-reduced-motion: reduce), print {
+/* @media (prefers-reduced-motion: reduce), print {
     .wow {
         -webkit-animation-duration: 1ms !important;
         animation-duration: 1ms !important;
@@ -118,7 +118,7 @@
     .wow[class*="Out"] {
         opacity: 0;
     }
-}
+} */
 @-webkit-keyframes bounce {
     0%,
     20%,
@@ -1802,8 +1802,8 @@
 @-webkit-keyframes fadeInUp {
     0% {
         opacity: 0;
-        -webkit-transform: translate3d(0, 100%, 0);
-        transform: translate3d(0, 100%, 0);
+        -webkit-transform: translate3d(0, 50px, 0);
+        transform: translate3d(0, 50px, 0);
     }
     to {
         opacity: 1;
@@ -1814,8 +1814,8 @@
 @keyframes fadeInUp {
     0% {
         opacity: 0;
-        -webkit-transform: translate3d(0, 100%, 0);
-        transform: translate3d(0, 100%, 0);
+        -webkit-transform: translate3d(0, 50px, 0);
+        transform: translate3d(0, 50px, 0);
     }
     to {
         opacity: 1;
