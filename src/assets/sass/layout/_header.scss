@@ -36,7 +36,7 @@
 	position: relative;
 	> .has-submenu {
 		.menu-text {
-			padding-right: 20px !important;
+			padding-right: 15px !important;
 		}
 	}
 	.sub-menu {
@@ -50,12 +50,12 @@
 			display: flex;
 			justify-content: space-between;
 			&::after {
-				@extend %line-ico;
+				@extend %font-ico;
 				content: "\f107";
 				right: 0;
 				top: 50%;
 				transform: translate(0, -50%);
-				font-size: 13px;
+				font-size: 10px;
 			}
 		}
 	}

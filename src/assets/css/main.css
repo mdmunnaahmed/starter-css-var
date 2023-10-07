@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700&display=swap");
 
 .menu, .list.list-column, .pagination {
     display: flex;
@@ -12,18 +12,25 @@ img,
     transition: all 0.3s;
 }
 
-.menu .menu-item.has-submenu > .menu-link::after, .list.list-style-two li::before, .list.list-style-check li::before {
+.list.list-style-two li::before, .list.list-style-check li::before {
     position: absolute;
     font-weight: 900;
     font-size: 16px;
     font-family: "Line Awesome Free";
 }
 
+.menu .menu-item.has-submenu > .menu-link::after {
+    position: absolute;
+    font-weight: 900;
+    font-size: 16px;
+    font-family: "Font Awesome 5 Free";
+}
+
 :root {
-    --heading-font: "Inter", sans-serif;
-    --body-font: "Assistant", sans-serif;
+    --heading-font: "Mulish", sans-serif;
+    --body-font: "Mulish", sans-serif;
     --heading: 0 0% 0%;
-    --body: 223 22% 1%;
+    --body: 223 22% 19%;
     --border: 0 0% 90%;
     --base-h: 347;
     --base-s: 72%;
@@ -41,28 +48,10 @@ img,
     --accent-s: 92%;
     --accent-l: 10%;
     --accent: var(--accent-h) var(--accent-s) var(--accent-l);
-    --accent-50: var(--accent-h) var(--accent-s) calc(var(--accent-l) + 25%);
-    --accent-100: var(--accent-h) var(--accent-s) calc(var(--accent-l) + 20%);
-    --accent-200: var(--accent-h) var(--accent-s) calc(var(--accent-l) + 15%);
-    --accent-300: var(--accent-h) var(--accent-s) calc(var(--accent-l) + 10%);
-    --accent-400: var(--accent-h) var(--accent-s) calc(var(--accent-l) + 5%);
-    --accent-600: var(--accent-h) var(--accent-s) calc(var(--accent-l) - 5%);
-    --accent-700: var(--accent-h) var(--accent-s) calc(var(--accent-l) - 10%);
-    --accent-800: var(--accent-h) var(--accent-s) calc(var(--accent-l) - 15%);
-    --accent-900: var(--accent-h) var(--accent-s) calc(var(--accent-l) - 20%);
     --light-h: 148;
     --light-s: 0%;
     --light-l: 95%;
     --light: var(--light-h) var(--light-s) var(--light-l);
-    --light-50: var(--light-h) var(--light-s) calc(var(--light-l) + 33%);
-    --light-100: var(--light-h) var(--light-s) calc(var(--light-l) + 20%);
-    --light-200: var(--light-h) var(--light-s) calc(var(--light-l) + 15%);
-    --light-300: var(--light-h) var(--light-s) calc(var(--light-l) + 10%);
-    --light-400: var(--light-h) var(--light-s) calc(var(--light-l) + 2%);
-    --light-600: var(--light-h) var(--light-s) calc(var(--light-l) - 2%);
-    --light-700: var(--light-h) var(--light-s) calc(var(--light-l) - 10%);
-    --light-800: var(--light-h) var(--light-s) calc(var(--light-l) - 15%);
-    --light-900: var(--light-h) var(--light-s) calc(var(--light-l) - 20%);
     --primary: 245 82% 67%;
     --secondary: 210 7% 56%;
     --success: 147 67% 47%;
@@ -71,6 +60,7 @@ img,
     --info: 200 90% 53%;
     --dark: 206 70% 11%;
     --white: 0 0% 100%;
+    --black: 0 0% 0%;
 }
 
 html {
@@ -274,22 +264,6 @@ h3 {
 }
 
 h4 {
-    font-size: 24px;
-}
-
-@media (max-width: 767px) {
-    h4 {
-        font-size: 22px;
-    }
-}
-
-@media (max-width: 575px) {
-    h4 {
-        font-size: 20px;
-    }
-}
-
-h4 {
     font-size: 22px;
 }
 
@@ -466,7 +440,7 @@ h6 {
 
 @media (min-width: 992px) {
     .btn.btn--lg,
-.cmn--btn.btn--lg {
+  .cmn--btn.btn--lg {
         font-size: 18px;
     }
 }
@@ -963,9 +937,7 @@ h6 {
     .table--responsive--md tbody tr td:last-child {
         border: none;
     }
-}
 
-@media (max-width: 767px) {
     .table--responsive--md tbody tr td::before {
         display: block;
     }
@@ -1008,9 +980,7 @@ h6 {
     .table--responsive--lg tbody tr td:last-child {
         border: none;
     }
-}
 
-@media (max-width: 991px) {
     .table--responsive--lg tbody tr td::before {
         display: block;
     }
@@ -1053,9 +1023,7 @@ h6 {
     .table--responsive--xl tbody tr td:last-child {
         border: none;
     }
-}
 
-@media (max-width: 1199px) {
     .table--responsive--xl tbody tr td::before {
         display: block;
     }
@@ -1182,14 +1150,14 @@ input:-webkit-autofill:focus {
 
 @media (max-width: 575px) {
     .custom--card .card-header,
-.custom--card .card-footer {
+  .custom--card .card-footer {
         padding: 10px 20px;
     }
 }
 
 @media (max-width: 575px) {
     .custom--card .card-header,
-.custom--card .card-footer {
+  .custom--card .card-footer {
         padding: 8px 15px;
     }
 }
@@ -1217,21 +1185,21 @@ input:-webkit-autofill:focus {
 
 @media (max-width: 767px) {
     .custom--card.card--lg .card-header,
-.custom--card.card--lg .card-footer {
+  .custom--card.card--lg .card-footer {
         padding: 15px 25px;
     }
 }
 
 @media (max-width: 575px) {
     .custom--card.card--lg .card-header,
-.custom--card.card--lg .card-footer {
+  .custom--card.card--lg .card-footer {
         padding: 10px 20px;
     }
 }
 
 @media (max-width: 450px) {
     .custom--card.card--lg .card-header,
-.custom--card.card--lg .card-footer {
+  .custom--card.card--lg .card-footer {
         padding: 8px 15px;
     }
 }
@@ -1453,7 +1421,7 @@ input:-webkit-autofill:focus {
 }
 
 .menu > .has-submenu .menu-text {
-    padding-right: 20px !important;
+    padding-right: 15px !important;
 }
 
 .menu .sub-menu .menu-item {
@@ -1471,7 +1439,7 @@ input:-webkit-autofill:focus {
     right: 0;
     top: 50%;
     transform: translate(0, -50%);
-    font-size: 13px;
+    font-size: 10px;
 }
 
 .header-trigger-wrapper {

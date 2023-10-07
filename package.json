@@ -1,18 +1,13 @@
 {
-  "name": "jobtotal",
+  "name": "starter",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://fahaddevs@bitbucket.org/fahaddevs/jobtotal.git"
-  },
-  "author": "",
+  "author": "Munna Ahmed",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/fahaddevs/jobtotal#readme",
   "devDependencies": {
     "browser-sync": "^2.27.4",
     "gulp": "^4.0.2",
@@ -24,6 +19,6 @@
     "gulp-sourcemaps": "^3.0.0"
   },
   "dependencies": {
-    "sass": "^1.49.9"
+    "sass": "^1.69.0"
   }
 }
