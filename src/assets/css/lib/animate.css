@@ -1634,8 +1634,8 @@
 @-webkit-keyframes fadeInDown {
     0% {
         opacity: 0;
-        -webkit-transform: translate3d(0, -100%, 0);
-        transform: translate3d(0, -100%, 0);
+        -webkit-transform: translate3d(0, -50px, 0);
+        transform: translate3d(0, -50px, 0);
     }
     to {
         opacity: 1;
@@ -1646,8 +1646,8 @@
 @keyframes fadeInDown {
     0% {
         opacity: 0;
-        -webkit-transform: translate3d(0, -100%, 0);
-        transform: translate3d(0, -100%, 0);
+        -webkit-transform: translate3d(0, -50px, 0);
+        transform: translate3d(0, -50px, 0);
     }
     to {
         opacity: 1;
@@ -1690,8 +1690,8 @@
 @-webkit-keyframes fadeInLeft {
     0% {
         opacity: 0;
-        -webkit-transform: translate3d(-100%, 0, 0);
-        transform: translate3d(-100%, 0, 0);
+        -webkit-transform: translate3d(-50px, 0, 0);
+        transform: translate3d(-50px, 0, 0);
     }
     to {
         opacity: 1;
@@ -1702,8 +1702,8 @@
 @keyframes fadeInLeft {
     0% {
         opacity: 0;
-        -webkit-transform: translate3d(-100%, 0, 0);
-        transform: translate3d(-100%, 0, 0);
+        -webkit-transform: translate3d(-50px, 0, 0);
+        transform: translate3d(-50px, 0, 0);
     }
     to {
         opacity: 1;
@@ -1746,8 +1746,8 @@
 @-webkit-keyframes fadeInRight {
     0% {
         opacity: 0;
-        -webkit-transform: translate3d(100%, 0, 0);
-        transform: translate3d(100%, 0, 0);
+        -webkit-transform: translate3d(50px, 0, 0);
+        transform: translate3d(50px, 0, 0);
     }
     to {
         opacity: 1;
@@ -1758,8 +1758,8 @@
 @keyframes fadeInRight {
     0% {
         opacity: 0;
-        -webkit-transform: translate3d(100%, 0, 0);
-        transform: translate3d(100%, 0, 0);
+        -webkit-transform: translate3d(50px, 0, 0);
+        transform: translate3d(50px, 0, 0);
     }
     to {
         opacity: 1;
@@ -1802,8 +1802,8 @@
 @-webkit-keyframes fadeInUp {
     0% {
         opacity: 0;
-        -webkit-transform: translate3d(0, 50px, 0);
-        transform: translate3d(0, 50px, 0);
+        -webkit-transform: translate3d(0, 40px, 0);
+        transform: translate3d(0, 40px, 0);
     }
     to {
         opacity: 1;
@@ -1814,8 +1814,8 @@
 @keyframes fadeInUp {
     0% {
         opacity: 0;
-        -webkit-transform: translate3d(0, 50px, 0);
-        transform: translate3d(0, 50px, 0);
+        -webkit-transform: translate3d(0, 40px, 0);
+        transform: translate3d(0, 40px, 0);
     }
     to {
         opacity: 1;
