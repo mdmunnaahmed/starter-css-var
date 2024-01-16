@@ -6,7 +6,7 @@ body {
 	padding: 0;
 	margin: 0;
 	font-size: 1rem;
-	line-height: 1.7;
+	line-height: 1.5;
 	color: hsl(var(--body));
 	font-family: var(--body-font);
 }
@@ -17,11 +17,6 @@ a {
 		color: hsl(var(--base));
 	}
 }
-a,
-img,
-.name {
-	@extend %transition;
-}
 span,
 sub,
 sup,
@@ -29,14 +24,6 @@ a {
 	display: inline-block;
 }
 
-.bg_img {
-	background-position: center;
-	background-size: cover !important;
-	background-repeat: no-repeat !important;
-}
-.bg_fixed {
-	background-attachment: fixed !important;
-}
 ul {
 	list-style: none;
 	margin: 0;
@@ -52,7 +39,6 @@ ul {
 	z-index: 111;
 	visibility: hidden;
 	opacity: 0;
-	@extend %transition;
 	&.active {
 		visibility: visible;
 		opacity: 1;
@@ -84,35 +70,6 @@ ul {
 	transform: translateY(0);
 	animation: bounceInDown 2s;
 }
-
-.fs--12px {
-	font-size: 12px !important;
-}
-.fs--13px {
-	font-size: 13px !important;
-}
-.fs--14px {
-	font-size: 14px !important;
-}
-.fs--15px {
-	font-size: 15px !important;
-}
-.fs--16px {
-	font-size: 16px !important;
-}
-.fs--18px {
-	font-size: 18px !important;
-}
-.fs--20px {
-	font-size: 20px !important;
-}
-.fs--22px {
-	font-size: 22px !important;
-}
-.fs--24px {
-	font-size: 24px !important;
-}
-
 h1,
 h2,
 h3,
@@ -182,4 +139,27 @@ h5 {
 }
 h6 {
 	font-size: 18px;
+}
+
+
+.fs--12px {
+	font-size: 12px !important;
+}
+.fs--13px {
+	font-size: 13px !important;
+}
+.fs--14px {
+	font-size: 14px !important;
+}
+.fs--15px {
+	font-size: 15px !important;
+}
+.fs--16px {
+	font-size: 16px !important;
+}
+.fs--18px {
+	font-size: 18px !important;
+}
+.fs--20px {
+	font-size: 20px !important;
 }

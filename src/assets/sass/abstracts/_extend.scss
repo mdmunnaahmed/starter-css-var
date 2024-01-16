@@ -8,34 +8,6 @@
 	align-items: center;
 	justify-content: center;
 }
-%transform-center {
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-}
-%position-set {
-	position: absolute;
-	content: "";
-	width: 100%;
-	height: 100%;
-	left: 0;
-	top: 0;
-}
-%position {
-	position: absolute;
-	content: "";
-	width: 100%;
-	height: 100%;
-}
-%position-relative {
-	position: relative;
-}
-%position-absolute {
-	position: absolute;
-}
-%transition {
-	transition: all 0.3s;
-}
 %text-wrap {
 	display: -webkit-box;
 	-webkit-box-orient: vertical;

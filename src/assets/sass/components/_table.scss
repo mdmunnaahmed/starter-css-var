@@ -1,182 +1,182 @@
-.table {
-	margin: 0;
-	font-size: 15px;
-	background-color: hsl(var(--white));
-	box-shadow: 0 0 8px hsl(var(--base) / 0.06);
-	thead {
-		tr {
-			th {
-				background: hsl(var(--base));
-				text-align: center;
-				font-size: 15px;
-				padding: 15px;
-				color: hsl(var(--white));
-				font-family: var(--heading-font);
-				font-weight: 500;
-				&:first-child {
-					text-align: left;
-					border-radius: 5px 0 0 0;
-				}
-				&:last-child {
-					border-radius: 0 5px 0 0;
-					text-align: right;
-				}
-			}
-		}
-	}
-	tbody {
-		border: 0 !important;
-		tr {
-			td {
-				text-align: center;
-				vertical-align: middle;
-				padding: 20px 15px;
-				border-width: 1px;
-				font-family: var(--heading-font);
-				&::before {
-					content: attr(data-label);
-					font-family: var(--heading-font);
-					font-size: 15px;
-					color: hsl(var(--heading));
-					font-weight: 500;
-					display: none;
-				}
-				&:first-child {
-					text-align: left;
-				}
-				&:last-child {
-					text-align: right;
-				}
-			}
-			&:nth-child(even) {
-				background: hsl(var(--light));
-			}
-		}
-	}
-	.amount {
-		span {
-			margin-right: 4px;
-		}
-	}
-}
+// .table {
+// 	margin: 0;
+// 	font-size: 15px;
+// 	background-color: hsl(var(--white));
+// 	box-shadow: 0 0 8px hsl(var(--base) / 0.06);
+// 	thead {
+// 		tr {
+// 			th {
+// 				background: hsl(var(--base));
+// 				text-align: center;
+// 				font-size: 15px;
+// 				padding: 15px;
+// 				color: hsl(var(--white));
+// 				font-family: var(--heading-font);
+// 				font-weight: 500;
+// 				&:first-child {
+// 					text-align: left;
+// 					border-radius: 5px 0 0 0;
+// 				}
+// 				&:last-child {
+// 					border-radius: 0 5px 0 0;
+// 					text-align: right;
+// 				}
+// 			}
+// 		}
+// 	}
+// 	tbody {
+// 		border: 0 !important;
+// 		tr {
+// 			td {
+// 				text-align: center;
+// 				vertical-align: middle;
+// 				padding: 20px 15px;
+// 				border-width: 1px;
+// 				font-family: var(--heading-font);
+// 				&::before {
+// 					content: attr(data-label);
+// 					font-family: var(--heading-font);
+// 					font-size: 15px;
+// 					color: hsl(var(--heading));
+// 					font-weight: 500;
+// 					display: none;
+// 				}
+// 				&:first-child {
+// 					text-align: left;
+// 				}
+// 				&:last-child {
+// 					text-align: right;
+// 				}
+// 			}
+// 			&:nth-child(even) {
+// 				background: hsl(var(--light));
+// 			}
+// 		}
+// 	}
+// 	.amount {
+// 		span {
+// 			margin-right: 4px;
+// 		}
+// 	}
+// }
 
-.table--responsive--md {
-	@include breakpoint(max-md) {
-		thead {
-			display: none;
-		}
-		tbody {
-			tr {
-				display: block;
-				td {
-					display: flex;
-					align-items: center;
-					justify-content: space-between;
-					gap: 35px;
-					text-align: right;
-					padding: 10px 15px;
-					border: none;
-					border-bottom: 1px solid hsl(var(--border));
-					@include breakpoint(max-lg) {
-						font-size: 14px !important;
-					}
-					&:last-child {
-						border: none;
-					}
-					&::before {
-						display: block;
-					}
-				}
-			}
-		}
-	}
-	@include breakpoint(md) {
-		tbody {
-			tr {
-				td {
-					border: 0;
-				}
-			}
-		}
-	}
-}
-.table--responsive--lg {
-	@include breakpoint(max-lg) {
-		thead {
-			display: none;
-		}
-		tbody {
-			tr {
-				display: block;
-				td {
-					display: flex;
-					align-items: center;
-					justify-content: space-between;
-					gap: 35px;
-					text-align: right;
-					padding: 10px 15px;
-					border: none;
-					border-bottom: 1px solid hsl(var(--border));
-					@include breakpoint(max-lg) {
-						font-size: 14px !important;
-					}
-					&:last-child {
-						border: none;
-					}
-					&::before {
-						display: block;
-					}
-				}
-			}
-		}
-	}
-	@include breakpoint(lg) {
-		tbody {
-			tr {
-				td {
-					border: none;
-				}
-			}
-		}
-	}
-}
-.table--responsive--xl {
-	@include breakpoint(max-xl) {
-		thead {
-			display: none;
-		}
-		tbody {
-			tr {
-				display: block;
-				td {
-					display: flex;
-					align-items: center;
-					justify-content: space-between;
-					gap: 35px;
-					text-align: right;
-					padding: 10px 15px;
-					border: none;
-					border-bottom: 1px solid hsl(var(--border));
-					@include breakpoint(max-lg) {
-						font-size: 14px !important;
-					}
-					&:last-child {
-						border: none;
-					}
-					&::before {
-						display: block;
-					}
-				}
-			}
-		}
-	}
-	@include breakpoint(xl) {
-		tbody {
-			tr {
-				td {
-					border: 0;
-				}
-			}
-		}
-	}
-}
+// .table--responsive--md {
+// 	@include breakpoint(max-md) {
+// 		thead {
+// 			display: none;
+// 		}
+// 		tbody {
+// 			tr {
+// 				display: block;
+// 				td {
+// 					display: flex;
+// 					align-items: center;
+// 					justify-content: space-between;
+// 					gap: 35px;
+// 					text-align: right;
+// 					padding: 10px 15px;
+// 					border: none;
+// 					border-bottom: 1px solid hsl(var(--border));
+// 					@include breakpoint(max-lg) {
+// 						font-size: 14px !important;
+// 					}
+// 					&:last-child {
+// 						border: none;
+// 					}
+// 					&::before {
+// 						display: block;
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// 	@include breakpoint(md) {
+// 		tbody {
+// 			tr {
+// 				td {
+// 					border: 0;
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+// .table--responsive--lg {
+// 	@include breakpoint(max-lg) {
+// 		thead {
+// 			display: none;
+// 		}
+// 		tbody {
+// 			tr {
+// 				display: block;
+// 				td {
+// 					display: flex;
+// 					align-items: center;
+// 					justify-content: space-between;
+// 					gap: 35px;
+// 					text-align: right;
+// 					padding: 10px 15px;
+// 					border: none;
+// 					border-bottom: 1px solid hsl(var(--border));
+// 					@include breakpoint(max-lg) {
+// 						font-size: 14px !important;
+// 					}
+// 					&:last-child {
+// 						border: none;
+// 					}
+// 					&::before {
+// 						display: block;
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// 	@include breakpoint(lg) {
+// 		tbody {
+// 			tr {
+// 				td {
+// 					border: none;
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+// .table--responsive--xl {
+// 	@include breakpoint(max-xl) {
+// 		thead {
+// 			display: none;
+// 		}
+// 		tbody {
+// 			tr {
+// 				display: block;
+// 				td {
+// 					display: flex;
+// 					align-items: center;
+// 					justify-content: space-between;
+// 					gap: 35px;
+// 					text-align: right;
+// 					padding: 10px 15px;
+// 					border: none;
+// 					border-bottom: 1px solid hsl(var(--border));
+// 					@include breakpoint(max-lg) {
+// 						font-size: 14px !important;
+// 					}
+// 					&:last-child {
+// 						border: none;
+// 					}
+// 					&::before {
+// 						display: block;
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// 	@include breakpoint(xl) {
+// 		tbody {
+// 			tr {
+// 				td {
+// 					border: 0;
+// 				}
+// 			}
+// 		}
+// 	}
+// }

@@ -1,16 +1,10 @@
-// Color Mixin
 @mixin text-wrap {
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
-
-//   transition
-@mixin transition {
-	transition: all ease 0.3s;
-}
-
+// media query mixin
 @mixin breakpoint($point) {
 	@if $point==xs {
 		@media (min-width: 320px) {
@@ -63,17 +57,6 @@
 		}
 	}
 }
-
-//Gadient Color Of Text
-@mixin hover-state {
-	&:hover,
-	&:active,
-	&:focus {
-		@content;
-	}
-}
-
-// media query mixin
 @mixin min($value) {
 	@media (min-width: $value) {
 		@content;
