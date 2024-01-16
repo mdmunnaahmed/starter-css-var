@@ -9,7 +9,7 @@ function style() {
     return gulp
         .src("./src/assets/sass/main.scss")
         .pipe(sass().on("error", sass.logError))
-        .pipe(gulp.dest("./src/assets/css"))
+        .pipe(gulp.dest("./dist/assets/css"))
         .pipe(browserSync.stream());
 }
 
