@@ -9,6 +9,7 @@ function style() {
     return gulp
         .src("./src/assets/sass/main.scss")
         .pipe(sass().on("error", sass.logError))
+        .pipe(gulp.dest("./src/assets/css"))
         .pipe(gulp.dest("./dist/assets/css"))
         .pipe(browserSync.stream());
 }
@@ -28,7 +29,7 @@ function htmlfileinclude() {
 
 function copyAssets() {
     return gulp
-        .src(["./src/**/*", "!./src/**/*.html", "!./src/html", "!./src/partial"])
+        .src(["./src/**/*", "!./src/**/*.html", "!./src/html", "!./src/partial", "!./src/assets/sass"])
         .pipe(gulp.dest("./dist/"));
 }
 
@@ -40,8 +41,8 @@ function watch() {
     });
 
     gulp.watch("./src/html/*.html", series(htmlfileinclude, copyAssets));
-    gulp.watch("./src/partial-html/*.html", series(htmlfileinclude, copyAssets));
-    gulp.watch("./src/assets/sass/**/*.scss", style);
+    gulp.watch("./src/partial/*.html", series(htmlfileinclude, copyAssets));
+    gulp.watch("./src/assets/sass/**/*.scss", style); // Include this line to watch Sass files
 
     gulp.watch("./dist/*.html").on("change", browserSync.reload);
 }
