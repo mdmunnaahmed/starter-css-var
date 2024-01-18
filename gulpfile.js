@@ -29,7 +29,7 @@ function htmlfileinclude() {
 
 function copyAssets() {
     return gulp
-        .src(["./src/**/*", "!./src/**/*.html", "!./src/html", "!./src/partial", "!./src/assets/sass"])
+        .src(["./src/**/*", "!./src/**/*.html", "!./src/html", "!./src/partial", "!./src/assets/sass/**"])
         .pipe(gulp.dest("./dist/"));
 }
 
