@@ -16,7 +16,7 @@ function style() {
 
 function htmlfileinclude() {
     return gulp
-        .src("./src/html/*.html")
+        .src("./src/pages/*.html")
         .pipe(
             fileinclude({
                 prefix: "@@",
@@ -29,7 +29,7 @@ function htmlfileinclude() {
 
 function copyAssets() {
     return gulp
-        .src(["./src/**/*", "!./src/**/*.html", "!./src/html", "!./src/partial", "!./src/assets/sass/**"])
+        .src(["./src/**/*", "!./src/**/*.html", "!./src/pages", "!./src/partial", "!./src/assets/sass/**"])
         .pipe(gulp.dest("./dist/"));
 }
 
@@ -40,7 +40,7 @@ function watch() {
         },
     });
 
-    gulp.watch("./src/html/*.html", series(htmlfileinclude, copyAssets));
+    gulp.watch("./src/pages/*.html", series(htmlfileinclude, copyAssets));
     gulp.watch("./src/partial/*.html", series(htmlfileinclude, copyAssets));
     gulp.watch("./src/assets/sass/**/*.scss", style); // Include this line to watch Sass files
 
