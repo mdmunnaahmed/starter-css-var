@@ -1,0 +1,30 @@
+@include breakpoint(max-xl) {
+  :root {
+    --fs-heading-one: 50px;
+    --fs-heading-two: 40px;
+    --fs-heading-three: 28px;
+    --fs-heading-four: 22px;
+    --fs-heading-five: 20px;
+    --fs-heading-six: 16px;
+  }
+}
+@include breakpoint(max-lg) {
+  :root {
+    --fs-heading-one: 40px;
+    --fs-heading-two: 36px;
+    --fs-heading-three: 28px;
+    --fs-heading-four: 22px;
+    --fs-heading-five: 20px;
+    --fs-heading-six: 16px;
+  }
+}
+@include breakpoint(max-sm) {
+  :root {
+    --fs-heading-one: 36px;
+    --fs-heading-two: 30px;
+    --fs-heading-three: 26px;
+    --fs-heading-four: 20px;
+    --fs-heading-five: 18px;
+    --fs-heading-six: 16px;
+  }
+}

@@ -1,20 +1,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;500;600;700&display=swap");
 
 :root {
-	--heading-font: "Roboto", sans-serif;
-	--body-font: "Roboto", sans-serif;
+  // font families
+  --ff-heading: "Roboto", sans-serif;
+  --ff-body: "Roboto", sans-serif;
 
-	--heading: rgb(0, 0, 0);
-	--body: rgb(46, 47, 44);
-	--base: rgb(18, 65, 35);
+  // line heights
+  --lh-heading: 1.2;
+  --lh-body: 1.5;
 
-	--primary: rgb(243, 78, 78);
-	--secondary: rgb(143, 152, 147);
-	--success: rgb(106, 192, 106);
-	--danger: rgb(222, 52, 52);
-	--warning: rgb(255, 112, 28);
-	--info: rgb(113, 137, 255);
-	--dark: rgb(12, 60, 32);
-	--white: rgb(255, 255, 255);
-	--black: rgb(0, 0, 0);
+  // font sizes
+  --fs-body: 16px;
+  --fs-heading-one: 60px;
+  --fs-heading-two: 48px;
+  --fs-heading-three: 30px;
+  --fs-heading-four: 24px;
+  --fs-heading-five: 20px;
+  --fs-heading-six: 18px;
+
+  // colors
+  --c-heading: #333333;
+  --c-body: #606065;
+
+  --c-base: #3fad0c;
+  --c-primary: #0a0c25;
+
+  --c-secondary: #8f9893;
+  --c-success: #1cb81c;
+  --c-danger: #de3434;
+  --c-warning: #ff701c;
+  --c-info: #7189ff;
+  --c-dark: #01111a;
+  --c-white: #ffffff;
+  --c-black: #000000;
+
+  // border color
+  --border-default: #ebebeb;
+  --border-light: #f0f0f0;
+  --border-dark: #ccc;
+
+  // bg colors
+  --bg-default: #f1f1f1;
+  --bg-light: #f4f4f4;
+  --bg-dark: #123123;
 }
