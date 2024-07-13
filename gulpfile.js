@@ -17,8 +17,8 @@ function htmlfileinclude() {
         basepath: "@file",
       })
     )
-    .pipe(gulp.dest("./src/")) // Export HTML files directly to the src folder
-    .pipe(browserSync.stream());
+    .pipe(gulp.dest("./src/"))
+    .pipe(browserSync.stream({ once: true }));
 }
 
 function watch() {
@@ -32,7 +32,6 @@ function watch() {
   gulp.watch("./src/partial/*.html", htmlfileinclude);
   gulp.watch("./src/assets/sass/**/*.scss", style);
 
-  gulp.watch("./src/*.html").on("change", browserSync.reload);
 }
 
 exports.watch = watch;
