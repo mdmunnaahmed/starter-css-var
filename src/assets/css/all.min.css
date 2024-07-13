@@ -1,10 +1,9 @@
-
 /*!
  * Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license (Commercial License)
  * Copyright 2023 Fonticons, Inc.
  */
- .fa {
+.fa {
   font-family: var(--fa-style-family, "Font Awesome 6 Pro");
   font-weight: var(--fa-style, 900);
 }
@@ -158,6 +157,7 @@
   margin-left: var(--fa-li-margin, 2.5em);
   padding-left: 0;
 }
+
 .fa-ul > li {
   position: relative;
 }
@@ -281,94 +281,119 @@
     transition-duration: 0s;
   }
 }
+
 @keyframes fa-beat {
   0%, 90% {
     transform: scale(1);
   }
+
   45% {
     transform: scale(var(--fa-beat-scale, 1.25));
   }
 }
+
 @keyframes fa-bounce {
   0% {
     transform: scale(1, 1) translateY(0);
   }
+
   10% {
     transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
   }
+
   30% {
     transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
   }
+
   50% {
     transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
   }
+
   57% {
     transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
   }
+
   64% {
     transform: scale(1, 1) translateY(0);
   }
+
   100% {
     transform: scale(1, 1) translateY(0);
   }
 }
+
 @keyframes fa-fade {
   50% {
     opacity: var(--fa-fade-opacity, 0.4);
   }
 }
+
 @keyframes fa-beat-fade {
   0%, 100% {
     opacity: var(--fa-beat-fade-opacity, 0.4);
     transform: scale(1);
   }
+
   50% {
     opacity: 1;
     transform: scale(var(--fa-beat-fade-scale, 1.125));
   }
 }
+
 @keyframes fa-flip {
   50% {
     transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
   }
 }
+
 @keyframes fa-shake {
   0% {
     transform: rotate(-15deg);
   }
+
   4% {
     transform: rotate(15deg);
   }
+
   8%, 24% {
     transform: rotate(-18deg);
   }
+
   12%, 28% {
     transform: rotate(18deg);
   }
+
   16% {
     transform: rotate(-22deg);
   }
+
   20% {
     transform: rotate(22deg);
   }
+
   32% {
     transform: rotate(-12deg);
   }
+
   36% {
     transform: rotate(12deg);
   }
+
   40%, 100% {
     transform: rotate(0deg);
   }
 }
+
 @keyframes fa-spin {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
+
 .fa-rotate-90 {
   transform: rotate(90deg);
 }
@@ -17265,6 +17290,7 @@ readers do not read off random characters that represent icons */
   font-display: block;
   src: url("/assets/fontawesome/fa-brands-400.woff2") format("woff2"), url("/assets/fontawesome/fa-brands-400.ttf") format("truetype");
 }
+
 .fab,
 .fa-brands {
   font-weight: 400;
@@ -19315,6 +19341,7 @@ readers do not read off random characters that represent icons */
   font-display: block;
   src: url("/assets/fontawesome/fa-light-300.woff2") format("woff2"), url("/assets/fontawesome/fa-light-300.ttf") format("truetype");
 }
+
 .fal,
 .fa-light {
   font-weight: 300;
@@ -19337,6 +19364,7 @@ readers do not read off random characters that represent icons */
   font-display: block;
   src: url("/assets/fontawesome/fa-regular-400.woff2") format("woff2"), url("/assets/fontawesome/fa-regular-400.ttf") format("truetype");
 }
+
 .far,
 .fa-regular {
   font-weight: 400;
@@ -19359,6 +19387,7 @@ readers do not read off random characters that represent icons */
   font-display: block;
   src: url("/assets/fontawesome/fa-sharp-light-300.woff2") format("woff2"), url("/assets/fontawesome/fa-sharp-light-300.ttf") format("truetype");
 }
+
 .fasl,
 .fa-light {
   font-weight: 300;
@@ -19381,6 +19410,7 @@ readers do not read off random characters that represent icons */
   font-display: block;
   src: url("/assets/fontawesome/fa-sharp-regular-400.woff2") format("woff2"), url("/assets/fontawesome/fa-sharp-regular-400.ttf") format("truetype");
 }
+
 .fasr,
 .fa-regular {
   font-weight: 400;
@@ -19403,6 +19433,7 @@ readers do not read off random characters that represent icons */
   font-display: block;
   src: url("/assets/fontawesome/fa-sharp-solid-900.woff2") format("woff2"), url("/assets/fontawesome/fa-sharp-solid-900.ttf") format("truetype");
 }
+
 .fass,
 .fa-solid {
   font-weight: 900;
@@ -19425,6 +19456,7 @@ readers do not read off random characters that represent icons */
   font-display: block;
   src: url("/assets/fontawesome/fa-solid-900.woff2") format("woff2"), url("/assets/fontawesome/fa-solid-900.ttf") format("truetype");
 }
+
 .fas,
 .fa-solid {
   font-weight: 900;
@@ -19447,6 +19479,7 @@ readers do not read off random characters that represent icons */
   font-display: block;
   src: url("/assets/fontawesome/fa-thin-100.woff2") format("woff2"), url("/assets/fontawesome/fa-thin-100.ttf") format("truetype");
 }
+
 .fat,
 .fa-thin {
   font-weight: 100;
